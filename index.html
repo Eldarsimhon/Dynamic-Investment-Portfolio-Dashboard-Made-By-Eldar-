@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WSCPGHP49"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4WSCPGHP49');
-</script>
-
-
-
 <html lang="he" dir="rtl">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WSCPGHP49"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4WSCPGHP49');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get The Dashboard ( Made By Eldar )</title>
@@ -23,7 +19,6 @@
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
         .glass-invite { background: rgba(16, 185, 129, 0.05); border: 1px dashed rgba(16, 185, 129, 0.3); }
         
-        /* אנימציית פעימה לכפתור הראשי */
         @keyframes pulse-emerald {
             0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); transform: scale(1); }
             70% { box-shadow: 0 0 0 15px rgba(16, 185, 129, 0); transform: scale(1.03); }
@@ -31,7 +26,6 @@
         }
         .animate-main-button { animation: pulse-emerald 2s infinite; }
         
-        /* אנימציה עדינה לקישור השני */
         @keyframes pulse-soft {
             0%, 100% { transform: scale(1); opacity: 1; }
             50% { transform: scale(1.05); opacity: 0.8; }
@@ -126,7 +120,7 @@
 
     <div class="text-center mb-16 flex flex-col items-center gap-2">
         <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
-           onclick="logClick()"
+           onclick="logClick(); gtag('event', 'duplicate_dashboard');"
            class="animate-main-button bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-5 px-12 rounded-full text-xl transition-all shadow-xl shadow-emerald-500/30 inline-flex items-center gap-3">
             <span>🚀</span>
             <span>שכפל את הדאשבורד עכשיו (חינם)</span>
@@ -143,7 +137,9 @@
             אם אתה חדש אבל התחום מדבר אליך?
         </p>
         <div class="animate-pulse-link">
-            <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" class="text-emerald-400 font-bold text-2xl hover:text-emerald-300 transition-all underline decoration-emerald-500/30 underline-offset-8">
+            <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" 
+               onclick="gtag('event', 'open_investment_account');"
+               class="text-emerald-400 font-bold text-2xl hover:text-emerald-300 transition-all underline decoration-emerald-500/30 underline-offset-8">
                 פתח תיק השקעות אישי עכשיו
             </a>
         </div>
@@ -160,11 +156,15 @@
             <p class="text-xs">סטודנט להנדסת תעשיה וניהול</p>
         </div>
         <div class="flex gap-8">
-            <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" class="hover:text-emerald-400 transition-colors flex items-center gap-2">
+            <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" 
+               onclick="gtag('event', 'click_linkedin');"
+               class="hover:text-emerald-400 transition-colors flex items-center gap-2">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 LinkedIn
             </a>
-            <a href="YOUR_CV_LINK.pdf" target="_blank" class="hover:text-emerald-400 transition-colors">קורות חיים (PDF)</a>
+            <a href="YOUR_CV_LINK.pdf" target="_blank" 
+               onclick="gtag('event', 'download_cv');"
+               class="hover:text-emerald-400 transition-colors">קורות חיים (PDF)</a>
         </div>
     </footer>
 
