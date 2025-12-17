@@ -35,10 +35,10 @@
         </div>
     </div>
 
-    <div class="w-full max-w-5xl glass rounded-3xl p-8 mb-16 shadow-lg">
-        <h2 class="text-3xl font-bold mb-8 text-white border-b border-white/10 pb-4">מדריך התקנה והפעלה מהירה</h2>
+    <div class="w-full max-w-4xl glass rounded-3xl p-8 mb-16 shadow-lg">
+        <h2 class="text-3xl font-bold mb-8 text-white border-b border-white/10 pb-4 text-center">מדריך התקנה והפעלה מהירה</h2>
         
-        <div class="bg-blue-900/20 border border-blue-500/30 p-5 rounded-xl mb-8 flex items-start gap-4">
+        <div class="bg-blue-900/20 border border-blue-500/30 p-5 rounded-xl mb-10 flex items-start gap-4">
             <div class="text-2xl">💡</div>
             <div>
                 <h3 class="font-bold text-blue-200 mb-1">טיפ לחדשים עם Google Sheets</h3>
@@ -49,46 +49,53 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-6">
             
-            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-colors">
-                <div class="text-emerald-400 font-bold text-xl mb-3">1. הגדרות ראשוניות</div>
-                <ul class="space-y-3 text-slate-300">
-                    <li class="flex items-start gap-2">
-                        <span class="text-emerald-500 mt-1">▹</span>
-                        <span><strong>תאריך התחלה:</strong> מומלץ להתחיל מעדכון של תאריך פתיחת התיק ל"אתמול" (להפחתת עומס בעת הזנת נתונים ראשונית).</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-emerald-500 mt-1">▹</span>
-                        <span><strong>עמלות:</strong> הזינו בצד את גובה העמלה הממוצעת לפעולה (לדוגמה: 1.5$).</span>
-                    </li>
-                </ul>
+            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-start">
+                <div class="bg-emerald-500/10 text-emerald-400 font-bold text-2xl w-12 h-12 flex items-center justify-center rounded-full shrink-0 border border-emerald-500/20">1</div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">הגדרות ראשוניות</h3>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><strong>תאריך התחלה:</strong> מומלץ להתחיל מעדכון של תאריך פתיחת התיק ל"אתמול" (להפחתת עומס בעת הזנת נתונים ראשונית).</li>
+                        <li><strong>עמלות:</strong> הזינו בצד את גובה העמלה הממוצעת לפעולה (לדוגמה: 1.5$).</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-colors">
-                <div class="text-emerald-400 font-bold text-xl mb-3">2. הזנת תיק ההשקעות (My Portfolio)</div>
-                <p class="text-slate-400 text-sm mb-3">גשו לטבלה המרכזית והזינו את הנתונים בעמודות:</p>
-                <ul class="grid grid-cols-2 gap-2 text-slate-300 text-sm">
-                    <li class="bg-slate-900/50 p-2 rounded">🔹 טיקר (סימול)</li>
-                    <li class="bg-slate-900/50 p-2 rounded">🔹 כמות יחידות</li>
-                    <li class="bg-slate-900/50 p-2 rounded">🔹 מחיר קנייה ממוצע</li>
-                    <li class="bg-slate-900/50 p-2 rounded">🔹 סקטור</li>
-                </ul>
+            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-start">
+                <div class="bg-emerald-500/10 text-emerald-400 font-bold text-2xl w-12 h-12 flex items-center justify-center rounded-full shrink-0 border border-emerald-500/20">2</div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">הזנת תיק ההשקעות (My Portfolio)</h3>
+                    <p class="text-slate-300 mb-2">גשו לטבלה המרכזית והזינו את הנתונים בעמודות:</p>
+                    <div class="flex flex-wrap gap-2 text-sm text-slate-400">
+                        <span class="bg-slate-900 px-2 py-1 rounded border border-white/10">טיקר (סימול)</span>
+                        <span class="bg-slate-900 px-2 py-1 rounded border border-white/10">כמות יחידות</span>
+                        <span class="bg-slate-900 px-2 py-1 rounded border border-white/10">מחיר קנייה ממוצע</span>
+                        <span class="bg-slate-900 px-2 py-1 rounded border border-white/10">סקטור</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-colors">
-                <div class="text-emerald-400 font-bold text-xl mb-3">3. ניהול היסטוריה (History)</div>
-                <p class="text-slate-300 leading-relaxed">
-                    הזינו את היסטוריית העסקאות הסגורות שלכם בטבלת ההיסטוריה. נתון זה הכרחי לצורך חישוב ה-Net Worth המדויק והתשואה הממומשת.
-                </p>
+            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-start">
+                <div class="bg-emerald-500/10 text-emerald-400 font-bold text-2xl w-12 h-12 flex items-center justify-center rounded-full shrink-0 border border-emerald-500/20">3</div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">ניהול היסטוריה (History)</h3>
+                    <p class="text-slate-300">
+                        הזינו את היסטוריית העסקאות הסגורות שלכם בטבלת ההיסטוריה. נתון זה הכרחי לצורך חישוב ה-Net Worth המדויק והתשואה הממומשת.
+                    </p>
+                </div>
             </div>
 
-            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-colors">
-                <div class="text-emerald-400 font-bold text-xl mb-3">4. סיום והפעלה</div>
-                <p class="text-slate-300 leading-relaxed">
-                    שנו את התאריך חזרה לתאריך המקורי שלכם, המתינו כחצי דקה לטעינת הנתונים, והכל מוכן! בהצלחה.
-                </p>
+            <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 flex flex-col md:flex-row gap-6 items-start">
+                <div class="bg-emerald-500/10 text-emerald-400 font-bold text-2xl w-12 h-12 flex items-center justify-center rounded-full shrink-0 border border-emerald-500/20">4</div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-2">סיום והפעלה</h3>
+                    <p class="text-slate-300">
+                        שנו את התאריך חזרה לתאריך המקורי שלכם, המתינו כחצי דקה לטעינת הנתונים, והכל מוכן! בהצלחה.
+                    </p>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -100,9 +107,9 @@
     </div>
 
     <footer class="w-full max-w-5xl border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-4">
-        <p>© 2025 אלדר שמחון. כל הזכויות שמורות.</p>
+        <p>© 2024 אלדר סימחון. כל הזכויות שמורות.</p>
         <div class="flex gap-6">
-            <a href="https://linkedin.com" target="_blank" class="hover:text-emerald-400 transition-colors">LinkedIn</a>
+            <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" class="hover:text-emerald-400 transition-colors">LinkedIn</a>
             <a href="YOUR_CV_LINK.pdf" target="_blank" class="hover:text-emerald-400 transition-colors">קורות חיים (PDF)</a>
         </div>
     </footer>
