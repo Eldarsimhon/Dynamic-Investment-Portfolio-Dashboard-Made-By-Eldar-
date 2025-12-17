@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WSCPGHP49"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'G-4WSCPGHP49');
     </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get The Dashboard ( Made By Eldar )</title>
+    <title>The Ultimate Dashboard (Made By Eldar)</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Outfit:wght@700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Assistant', sans-serif; background-color: #0f172a; color: white; }
+        h1 { font-family: 'Outfit', sans-serif; } /* פונט מיוחד לכותרת באנגלית */
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.3s ease; }
+        .glass-card:hover { border-color: rgba(16, 185, 129, 0.4); transform: translateY(-5px); }
         .glass-invite { background: rgba(16, 185, 129, 0.05); border: 1px dashed rgba(16, 185, 129, 0.3); }
         
         @keyframes pulse-emerald {
@@ -34,23 +37,25 @@
         .animate-pulse-link { animation: pulse-soft 2s infinite ease-in-out; display: inline-block; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center p-6">
+<body class="min-h-screen flex flex-col items-center p-6 overflow-x-hidden">
 
-    <header class="text-center mt-10 mb-12">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-            הדרך שלך לשליטה פיננסית מלאה
+    <header class="text-center mt-12 mb-12 max-w-4xl mx-auto">
+        <h1 class="text-6xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
+            The Ultimate Dashboard
         </h1>
-        <div class="max-w-3xl mx-auto mb-8">
-            <p class="text-slate-300 text-xl md:text-2xl leading-relaxed">
-                יצרתי לעצמי מערכת חכמה לניהול השקעות, מעקב תשואות גרפים ותרשימים תוך שילוב אוטומציה מלאה על תיק ההשקעות לפי השווי המדוייק בזמן אמת.
-            </p>
-            <p class="text-emerald-400 font-bold text-2xl mt-4">
-                עכשיו היא זמינה גם עבורך.
+        <h2 class="text-2xl md:text-3xl text-slate-300 font-light tracking-wide mb-8">
+            הדרך שלך לשליטה פיננסית מלאה
+        </h2>
+        
+        <div class="max-w-3xl mx-auto">
+            <p class="text-slate-400 text-lg leading-relaxed">
+                יצרתי לעצמי מערכת חכמה לניהול השקעות המשלבת אוטומציה מלאה וניתוח נתונים בזמן אמת.
+                <span class="text-emerald-400 font-bold block mt-2">עכשיו היא זמינה גם עבורך.</span>
             </p>
         </div>
     </header>
 
-    <div class="w-full max-w-5xl glass rounded-3xl overflow-hidden shadow-2xl mb-12 border border-white/10">
+    <div class="w-full max-w-5xl glass rounded-3xl overflow-hidden shadow-2xl mb-16 border border-white/10">
         <div class="bg-slate-800/50 p-4 flex items-center gap-2 border-b border-white/10">
             <div class="w-3 h-3 rounded-full bg-red-500"></div>
             <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -60,6 +65,63 @@
         
         <div class="aspect-video w-full bg-slate-900/50">
             <img src="dashboard.png" alt="Dashboard Preview" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <div class="w-full max-w-6xl mb-20 px-4">
+        <div class="text-center mb-10">
+            <h3 class="text-3xl font-bold text-white mb-2">למה דווקא הדאשבורד הזה?</h3>
+            <p class="text-slate-400">כל האינפורמציה תחת קורת גג אחת</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">📊</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">ניתוח ביצועים משולש</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    השוואה בזמן אמת: תשואה דולרית vs שקלית vs מדד ה-S&P 500. הכל מנורמל לתאריך הכניסה המדויק להבנת הביצועים הריאליים מול השוק.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">💰</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">Net Worth אוטומטי</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    מעקב שווי נקי הכולל סימולציית מיסוי ושערי מט"ח בלייב. דעו בדיוק מה היתרה נטו (After-tax) שלכם בכל רגע נתון.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">🎯</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">אינדיקטורים ו-KPIs</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    טבלת מעקב המרכזת P/E, PEG ו-Drawdown (מרחק מהשיא). זיהוי הזדמנויות והערכת סיכונים תחת מסך אחד נוח.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">🥧</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">הקצאת נכסים (Allocation)</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    ויזואליזציה של פיזור התיק ברמת המניה והסקטור. כלי קריטי לניתוח חשיפות, מניעת ריכוזיות יתר וניהול סיכונים אקטיבי.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">📈</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">גרף תשואה השוואתי</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    גרף ויזואלי של האחזקות מול ה-S&P 500 החל מיום הכניסה. מאפשר זיהוי קורלציה, ניתוח תנודתיות ובחינת עוצמת התיק.
+                </p>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl">
+                <div class="text-emerald-400 text-xl mb-3">👀</div>
+                <h4 class="font-bold text-lg text-slate-200 mb-2">רשימת מעקב (Watchlist)</h4>
+                <p class="text-sm text-slate-400 leading-relaxed">
+                    גיליון צמוד הכולל רשימת מעקב מסודרת עם יכולת התאמת אינדיקטורים לפי הצורך, כדי שלא תפספסו את ההזדמנות הבאה.
+                </p>
+            </div>
         </div>
     </div>
 
