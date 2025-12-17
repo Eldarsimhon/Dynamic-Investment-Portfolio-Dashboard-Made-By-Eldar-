@@ -5,153 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אלדר סימחון - דאשבורד השקעות חכם</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Assistant', sans-serif; background-color: #0f172a; color: white; overflow-x: hidden; }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .glass-card { background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.6) 100%); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
         
-        /* אנימציה עדינה לרקע */
+        /* אנימציה לכפתור */
         @keyframes pulse-glow {
             0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); transform: scale(1); }
-            50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.4); transform: scale(1.02); }
+            50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.5); transform: scale(1.02); }
         }
-        .animate-pulse-glow { animation: pulse-glow 2.5s infinite; }
-        
-        /* אפקט הילה לטקסט */
-        .text-glow { text-shadow: 0 0 20px rgba(16, 185, 129, 0.3); }
+        .animate-pulse-glow { animation: pulse-glow 2s infinite; }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center p-4 md:p-8 bg-slate-900 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
+<body class="min-h-screen flex flex-col items-center p-4 md:p-8 bg-[url('https://grainy-gradients.vercel.app/noise.svg')]">
 
-    <header class="text-center mt-8 md:mt-16 mb-12 max-w-4xl px-4 z-10">
-        <div class="inline-block px-3 py-1 mb-6 text-xs font-bold tracking-wider text-emerald-300 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/20 shadow-lg shadow-emerald-500/10">
-            פרויקט אישי שהפך לציבורי
+    <header class="text-center mt-8 md:mt-16 mb-12 max-w-4xl px-4">
+        <div class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-emerald-400 uppercase bg-emerald-500/10 rounded-full border border-emerald-500/20">
+            גירסה 2.0 זמינה כעת
         </div>
-        
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight text-white drop-shadow-2xl">
-            הדרך לשליטה <span class="bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-cyan-400 text-glow">פיננסית מלאה</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight bg-gradient-to-br from-white via-slate-200 to-slate-500 bg-clip-text text-transparent drop-shadow-lg">
+            הדרך שלך לשליטה <br class="hidden md:block" />
+            <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">פיננסית מלאה</span>
         </h1>
-        
-        <div class="glass p-6 md:p-8 rounded-2xl max-w-3xl mx-auto border border-white/5">
-            <p class="text-slate-300 text-lg md:text-xl leading-relaxed font-light">
-                "יצרתי עבור עצמי מערכת חכמה לניהול השקעות, מעקב תשואות ואוטומציה מלאה של תיק ההשקעות בזמן אמת.
-            </p>
-            <p class="text-white font-bold text-xl md:text-2xl mt-4 border-t border-white/10 pt-4 inline-block">
-                עכשיו היא זמינה גם עבורך.
-            </p>
-        </div>
+        <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            מערכת חכמה לניהול השקעות, מעקב תשואות ואוטומציה של נתוני שוק בזמן אמת.
+            נבנתה כדי לתת לך תמונת מצב מדויקת על הכסף שלך.
+        </p>
     </header>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl mb-12 px-2 z-10">
-        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">⚡</div>
-            <h3 class="font-bold text-white mb-2 text-lg">אוטומציה מלאה</h3>
-            <p class="text-sm text-slate-400">הנתונים נמשכים מהבורסה בזמן אמת ללא צורך בהזנה ידנית שוטפת.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl mb-12 px-2">
+        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300">
+            <div class="text-3xl mb-3">⚡</div>
+            <h3 class="font-bold text-white mb-1">אוטומציה מלאה</h3>
+            <p class="text-sm text-slate-400">נתונים בזמן אמת שמתעדכנים אוטומטית ללא מגע יד אדם.</p>
         </div>
-        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🛡️</div>
-            <h3 class="font-bold text-white mb-2 text-lg">ניהול סיכונים</h3>
-            <p class="text-sm text-slate-400">ניתוח חשיפה סקטוריאלית, פיזור גיאוגרפי ומדדי סיכון מתקדמים.</p>
+        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300">
+            <div class="text-3xl mb-3">🛡️</div>
+            <h3 class="font-bold text-white mb-1">ניהול סיכונים</h3>
+            <p class="text-sm text-slate-400">ניתוח חשיפה סקטוריאלית ומעקב אחרי ביצועים מול השוק.</p>
         </div>
-        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300 group">
-            <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📈</div>
-            <h3 class="font-bold text-white mb-2 text-lg">מעקב Net Worth</h3>
-            <p class="text-sm text-slate-400">תמונת מצב הוליסטית של כל הנכסים וההתחייבויות שלך במקום אחד.</p>
+        <div class="glass p-6 rounded-2xl text-center hover:bg-white/5 transition duration-300">
+            <div class="text-3xl mb-3">📈</div>
+            <h3 class="font-bold text-white mb-1">מעקב Net Worth</h3>
+            <p class="text-sm text-slate-400">ראייה הוליסטית של כל הנכסים שלך במקום אחד ומסודר.</p>
         </div>
     </div>
 
-    <div class="w-full max-w-6xl glass-card rounded-3xl overflow-hidden shadow-2xl mb-20 border border-white/10 z-10">
-        <div class="bg-slate-900/90 p-3 flex items-center gap-2 border-b border-white/5">
-            <div class="flex gap-1.5 ml-2">
+    <div class="w-full max-w-6xl glass-card rounded-3xl overflow-hidden shadow-2xl mb-16 border border-white/10 group">
+        <div class="bg-slate-900/80 p-4 flex items-center justify-between border-b border-white/5 backdrop-blur-md">
+            <div class="flex gap-2">
                 <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                 <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
             </div>
-            <div class="bg-slate-800 rounded px-3 py-1 text-xs text-slate-400 flex-1 text-center font-mono">My_Portfolio_Dashboard_v2.0</div>
+            <span class="text-slate-500 text-xs font-mono tracking-widest uppercase">Dashboard Preview</span>
         </div>
         
-        <div class="aspect-video w-full bg-slate-900/50">
-            <img src="dashboard.png" alt="Investment Dashboard" class="w-full h-full object-cover">
+        <div class="aspect-video w-full bg-slate-900/50 relative">
+            <img src="dashboard.png" alt="Investment Dashboard" class="w-full h-full object-contain object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none"></div>
         </div>
     </div>
 
-    <div class="w-full max-w-5xl mb-24 px-4 z-10">
-        <h2 class="text-3xl font-bold text-white text-center mb-10">מדריך הפעלה מהיר</h2>
+    <div class="w-full max-w-5xl mb-20">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-white">איך מתחילים?</h2>
+            <p class="text-slate-400 mt-2">4 צעדים פשוטים ואתה בפנים</p>
+        </div>
 
-        <div class="glass p-5 rounded-xl mb-8 flex items-center gap-4 border-r-4 border-r-blue-500 bg-blue-500/5">
-            <div class="text-3xl">💡</div>
+        <div class="glass p-5 rounded-xl mb-8 flex items-start gap-4 mx-2 md:mx-0 border-r-4 border-r-blue-500 bg-blue-500/5">
+            <div class="text-2xl">💡</div>
             <div>
-                <h3 class="font-bold text-blue-200 mb-1">טיפ למקצוענים</h3>
-                <p class="text-slate-300 text-sm">
-                    הוספת שורה ב-Google Sheets? רק באמצעות <strong>לחצן ימני -> "הוסף שורה מעל/מתחת"</strong>. 
-                    זה קריטי לשמירה על הנוסחאות.
+                <h3 class="font-bold text-blue-200 mb-1">טיפ חשוב לשימוש ב-Google Sheets</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    הוספת שורה חדשה בטבלה מתבצעת על ידי לחיצה עם הכפתור הימני ובחירה ב-<strong>"הוספת שורה מעל/מתחת"</strong>. 
+                    כך תשמרו על הנוסחאות והעיצוב המותנה.
                 </p>
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
-                <div class="text-6xl font-bold text-white/5 mb-4 absolute top-4 left-6">01</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-3 relative">הגדרות ראשוניות</h3>
-                <ul class="space-y-2 text-slate-400 text-sm relative">
-                    <li class="flex items-start gap-2"><span>•</span> תאריך התחלה: שנו ל"אתמול" לטעינה מהירה.</li>
-                    <li class="flex items-start gap-2"><span>•</span> עמלות: הזינו עמלת קנייה/מכירה ממוצעת.</li>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-2 md:px-0">
+            
+            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-emerald-400 font-bold text-4xl mb-4 opacity-20">01</div>
+                <h3 class="text-xl font-bold text-white mb-3">הגדרות ראשוניות</h3>
+                <ul class="space-y-2 text-slate-400 text-sm">
+                    <li>• <strong>תאריך התחלה:</strong> שנו ל"אתמול" כדי להפחית עומס בטעינה ראשונית.</li>
+                    <li>• <strong>עמלות:</strong> הזינו את עמלת הקנייה/מכירה הממוצעת שלכם (למשל 1.5$).</li>
                 </ul>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
-                <div class="text-6xl font-bold text-white/5 mb-4 absolute top-4 left-6">02</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-3 relative">הזנת התיק (Portfolio)</h3>
-                <p class="text-slate-400 text-sm mb-3 relative">הזינו בטבלה הראשית:</p>
-                <div class="flex flex-wrap gap-2 text-xs text-slate-300 relative">
-                    <span class="bg-slate-800 px-2 py-1 rounded border border-white/10">טיקר</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded border border-white/10">כמות</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded border border-white/10">מחיר קנייה</span>
-                    <span class="bg-slate-800 px-2 py-1 rounded border border-white/10">סקטור</span>
+            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-emerald-400 font-bold text-4xl mb-4 opacity-20">02</div>
+                <h3 class="text-xl font-bold text-white mb-3">הזנת התיק (My Portfolio)</h3>
+                <p class="text-slate-400 text-sm mb-3">הזינו בטבלה הראשית:</p>
+                <div class="flex flex-wrap gap-2 text-xs text-slate-300">
+                    <span class="bg-white/5 px-2 py-1 rounded">טיקר</span>
+                    <span class="bg-white/5 px-2 py-1 rounded">כמות</span>
+                    <span class="bg-white/5 px-2 py-1 rounded">מחיר קנייה</span>
+                    <span class="bg-white/5 px-2 py-1 rounded">סקטור</span>
                 </div>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
-                <div class="text-6xl font-bold text-white/5 mb-4 absolute top-4 left-6">03</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-3 relative">היסטוריה (History)</h3>
-                <p class="text-slate-400 text-sm leading-relaxed relative">
-                    הזינו עסקאות עבר סגורות. זה המפתח לחישוב מדויק של התשואה הממומשת והשווי הנקי האמיתי שלכם.
+            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-emerald-400 font-bold text-4xl mb-4 opacity-20">03</div>
+                <h3 class="text-xl font-bold text-white mb-3">היסטוריה (History)</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    הזינו את העסקאות הסגורות שלכם (מכירות עבר). זה קריטי לחישוב מדויק של ה-Net Worth והתשואה הממומשת.
                 </p>
             </div>
 
-            <div class="glass-card p-8 rounded-2xl hover:border-emerald-500/30 transition-all duration-300">
-                <div class="text-6xl font-bold text-white/5 mb-4 absolute top-4 left-6">04</div>
-                <h3 class="text-xl font-bold text-emerald-400 mb-3 relative">Launch</h3>
-                <p class="text-slate-400 text-sm leading-relaxed relative">
-                    החזירו את התאריך לתאריך המקורי, המתינו כ-30 שניות לסינכרון הנתונים, והדאשבורד מוכן לעבודה.
+            <div class="glass-card p-8 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="text-emerald-400 font-bold text-4xl mb-4 opacity-20">04</div>
+                <h3 class="text-xl font-bold text-white mb-3">סיום והפעלה</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    החזירו את התאריך לתאריך המקורי, המתינו כ-30 שניות לטעינת הנתונים מהבורסה, וזהו - הדאשבורד שלכם מוכן!
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="text-center mb-24 relative z-10 w-full px-4">
-        <div class="inline-flex flex-col items-center gap-6">
-            <div class="bg-emerald-500/10 text-emerald-400 px-5 py-2 rounded-full text-sm font-bold border border-emerald-500/20 animate-pulse">
-                🚀 הצטרפו ל-150+ משקיעים שכבר הורידו
+    <div class="text-center mb-24 relative z-10">
+        <div class="inline-flex flex-col items-center gap-4">
+            <div class="bg-emerald-500/10 text-emerald-400 px-4 py-1 rounded-full text-sm font-semibold border border-emerald-500/20">
+                🚀 הורידו כבר מעל 150 משקיעים
             </div>
             
             <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
-               class="animate-pulse-glow group bg-gradient-to-r from-emerald-500 to-emerald-400 hover:from-emerald-400 hover:to-emerald-300 text-slate-900 font-bold py-5 px-10 md:px-16 rounded-full text-xl md:text-2xl transition-all transform hover:-translate-y-1 shadow-xl shadow-emerald-500/25 flex items-center justify-center gap-3 w-full md:w-auto">
-                <span>שכפל את הדאשבורד בחינם</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:rotate-12 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+               class="animate-pulse-glow bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-xl shadow-emerald-500/20 flex items-center gap-3">
+                <span>שכפל את הדאשבורד (חינם)</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
             </a>
-            <p class="text-slate-500 text-sm">Google Sheets Template • 100% Free</p>
+            <p class="text-slate-500 text-sm mt-2">נדרש חשבון Google פעיל • השימוש חופשי</p>
         </div>
     </div>
 
-    <footer class="w-full border-t border-white/5 py-10 bg-slate-900/50">
+    <footer class="w-full border-t border-white/5 py-10">
         <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-right">
                 <h4 class="font-bold text-white text-lg">אלדר סימחון</h4>
-                <p class="text-slate-500 text-sm">Industrial Engineering & Management Student</p>
+                <p class="text-slate-500 text-sm">סטודנט להנדסת תעשייה וניהול | אנליסט נתונים</p>
             </div>
             
             <div class="flex gap-6">
