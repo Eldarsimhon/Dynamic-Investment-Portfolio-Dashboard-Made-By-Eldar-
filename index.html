@@ -9,6 +9,7 @@
     <style>
         body { font-family: 'Assistant', sans-serif; background-color: #0f172a; color: white; }
         .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .glass-invite { background: rgba(16, 185, 129, 0.05); border: 1px dashed rgba(16, 185, 129, 0.3); }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-6">
@@ -40,7 +41,7 @@
         </div>
     </div>
 
-    <div class="w-full max-w-5xl glass rounded-3xl p-8 mb-16 shadow-lg">
+    <div class="w-full max-w-5xl glass rounded-3xl p-8 mb-12 shadow-lg">
         <h2 class="text-3xl font-bold mb-8 text-white border-b border-white/10 pb-4">מדריך התקנה והפעלה מהירה</h2>
         
         <div class="bg-blue-900/20 border border-blue-500/30 p-5 rounded-xl mb-8 flex items-start gap-4">
@@ -55,7 +56,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            
             <div class="bg-slate-800/40 p-6 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-all">
                 <div class="text-emerald-400 font-bold text-xl mb-3">1. הגדרות ראשוניות</div>
                 <ul class="space-y-3 text-slate-300 text-sm">
@@ -97,11 +97,19 @@
         </div>
     </div>
 
-    <div class="text-center mb-20 flex flex-col items-center gap-4">
-        
+    <div class="text-center mb-12 flex flex-col items-center gap-4">
         <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
            class="bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-xl shadow-emerald-500/30 inline-flex items-center gap-3">
             <span>שכפל את הדאשבורד עכשיו (חינם)</span>
+        </a>
+    </div>
+
+    <div class="w-full max-w-2xl glass-invite rounded-2xl p-6 mb-16 text-center shadow-lg">
+        <p class="text-slate-300 text-lg mb-4">
+            חדש אבל התחום מדבר אליך?
+        </p>
+        <a href="https://cloud.mc.ibi.co.il/rc?c=C00110308" target="_blank" class="text-emerald-400 font-bold text-xl hover:text-emerald-300 transition-all underline decoration-emerald-500/30 underline-offset-8">
+            פתח תיק השקעות אישי עכשיו
         </a>
     </div>
 
