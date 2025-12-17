@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אלדר סימחון - דאשבורד השקעות</title>
+    <title> Get The Dashboard ( Made By Eldar )</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -18,6 +18,13 @@
             100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); transform: scale(1); }
         }
         .animate-main-button { animation: pulse-emerald 2s infinite; }
+        
+        /* אנימציה עדינה לקישור השני */
+        @keyframes pulse-soft {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+        .animate-pulse-link { animation: pulse-soft 2s infinite ease-in-out; display: inline-block; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-6">
@@ -28,7 +35,7 @@
         </h1>
         <div class="max-w-3xl mx-auto mb-8">
             <p class="text-slate-300 text-xl md:text-2xl leading-relaxed">
-                יצרתי עבור עצמי מערכת חכמה לניהול השקעות, מעקב תשואות ואוטומציה מלאה של תיק ההשקעות בזמן אמת.
+                יצרתי לעצמי מערכת חכמה לניהול השקעות, מעקב תשואות גרפים ותרשימים תוך שילוב אוטומציה מלאה על תיק ההשקעות לפי השווי המדוייק בזמן אמת.
             </p>
             <p class="text-emerald-400 font-bold text-2xl mt-4">
                 עכשיו היא זמינה גם עבורך.
@@ -57,9 +64,11 @@
             <div>
                 <h3 class="font-bold text-blue-200 mb-1 text-lg">טיפ לחדשים (Google Sheets)</h3>
                 <p class="text-blue-100/80 text-sm leading-relaxed">
-                    הוספת שורה חדשה בטבלה מתבצעת על ידי לחיצה עם הכפתור הימני על שורה קיימת ובחירה ב-<strong>"הוספת שורה מעל/מתחת"</strong>. 
-                    כך תשמרו על שלמות הנוסחאות והעיצוב המותנה של המערכת.
-                </p>
+<p>
+    <strong>הוספה/מחיקה:</strong> לחצו לחיצה ימנית על מספר שורה ובחרו <strong>"הוספת שורה"</strong> או <strong>"מחיקת שורה"</strong>. 
+    כך תשמרו על שלמות הנוסחאות והעיצוב המותנה של המערכת.
+</p>
+            
             </div>
         </div>
 
@@ -106,19 +115,47 @@
     </div>
 
     <div class="text-center mb-12 flex flex-col items-center gap-4">
+        
+        <div class="bg-emerald-500/10 text-emerald-400 px-5 py-2 rounded-full text-sm font-bold border border-emerald-500/20 flex items-center gap-2">
+            <span>🚀</span>
+            <span id="visit-counter">טוען נתונים...</span>
+            <span>משקיעים כבר ביקרו כאן</span>
+        </div>
+
+        <script>
+            // הגדרת מספר בסיס
+            const STARTING_OFFSET = 152; 
+
+            function updateCounter() {
+                // משיכת נתונים משירות CountAPI
+                fetch('https://api.countapi.xyz/hit/eldarsimhon-dashboard-final/visits')
+                .then(res => res.json())
+                .then(res => {
+                    const totalViews = STARTING_OFFSET + res.value;
+                    document.getElementById('visit-counter').innerText = totalViews;
+                })
+                .catch(() => {
+                    document.getElementById('visit-counter').innerText = "150+";
+                });
+            }
+            updateCounter();
+        </script>
+
         <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
-           class="animate-main-button bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-5 px-12 rounded-full text-xl transition-all shadow-xl shadow-emerald-500/30 inline-flex items-center gap-3">
-            <span>🚀</span> שכפל את הדאשבורד עכשיו (חינם)
+           class="animate-main-button bg-emerald-500 hover:bg-emerald-400 text-slate-900 font-bold py-5 px-12 rounded-full text-xl transition-all shadow-xl shadow-emerald-500/30 inline-flex items-center gap-3 mt-2">
+            <span>שכפל את הדאשבורד עכשיו (חינם)</span>
         </a>
     </div>
 
-    <div class="w-full max-w-2xl glass-invite rounded-2xl p-6 mb-16 text-center shadow-lg">
+    <div class="w-full max-w-2xl glass-invite rounded-2xl p-6 mb-16 text-center shadow-lg mx-auto">
         <p class="text-slate-300 text-lg mb-4">
             אם אתה חדש אבל התחום מדבר אליך?
         </p>
-        <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" class="text-emerald-400 font-bold text-xl hover:text-emerald-300 transition-all underline decoration-emerald-500/30 underline-offset-8">
-            פתח תיק השקעות אישי עכשיו
-        </a>
+        <div class="animate-pulse-link">
+            <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" class="text-emerald-400 font-bold text-2xl hover:text-emerald-300 transition-all underline decoration-emerald-500/30 underline-offset-8">
+                פתח תיק השקעות אישי עכשיו
+            </a>
+        </div>
     </div>
 
     <footer class="w-full max-w-5xl border-t border-white/10 pt-8 pb-10 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-4">
