@@ -20,10 +20,10 @@
             extend: {
               colors: {
                 cyber: {
-                    DEFAULT: '#06b6d4', // Cyan
-                    light: '#67e8f9',
-                    mint: '#34d399', // Mint
-                    dark: '#0e1629' // Deeper background
+                    DEFAULT: '#06b6d4', // Cyan primary
+                    light: '#67e8f9',   // Cyan light
+                    mint: '#34d399',    // Mint accent
+                    dark: '#0e1629'     // Deep background
                 }
               }
             }
@@ -76,8 +76,8 @@
 
         /* כותרת מסיבית */
         .responsive-h1-massive {
-            font-size: clamp(3.5rem, 11vw, 7.5rem); /* הוגדל משמעותית */
-            line-height: 1;
+            font-size: clamp(3rem, 9vw, 7rem); /* הותאם מעט לטקסט המקורי */
+            line-height: 1.1;
             font-weight: 800;
             letter-spacing: -0.02em;
         }
@@ -92,6 +92,7 @@
         
         .glass-invite { background: rgba(6, 182, 212, 0.04); border: 1px dashed rgba(6, 182, 212, 0.3); }
 
+        /* כרטיסיות PRO החדשות */
         .feature-card-pro { 
             background: linear-gradient(180deg, rgba(20, 30, 48, 0.6) 0%, rgba(15, 23, 42, 0.4) 100%);
             backdrop-filter: blur(12px); 
@@ -112,6 +113,7 @@
         .bg-cyber-accent-low { background-color: rgba(6, 182, 212, 0.1); }
         .border-cyber-accent { border-color: rgba(6, 182, 212, 0.3); }
         
+        /* אנימציית כפתור ראשי חדשה */
         @keyframes pulse-cyber {
             0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6); }
             70% { box-shadow: 0 0 0 20px rgba(6, 182, 212, 0); }
@@ -135,19 +137,19 @@
 
     <header class="text-center mt-12 md:mt-20 mb-16 md:mb-24 w-full max-w-[90rem] px-4 relative z-10">
         <div data-aos="fade-down" data-aos-duration="1200">
-            <h1 class="responsive-h1-massive mb-8 text-cyber-gradient mx-auto">
-                The Ultimate<br>Dashboard
+            <h1 class="responsive-h1-massive mb-8 text-cyber-gradient mx-auto tracking-tight">
+                The Ultimate Dashboard
             </h1>
         </div>
         
-        <h2 data-aos="fade-up" data-aos-delay="200" class="text-2xl md:text-4xl text-slate-200 font-light tracking-wide mb-10 opacity-90 max-w-4xl mx-auto leading-tight">
-            שליטה פיננסית מלאה. <span class="font-semibold text-cyber-accent">אוטומטית.</span>
+        <h2 data-aos="fade-up" data-aos-delay="200" class="text-xl md:text-3xl text-slate-200 font-light tracking-wide mb-10 opacity-90 max-w-4xl mx-auto leading-tight">
+            הדרך שלך להשיג שליטה פיננסית <span class="font-semibold text-cyber-accent">מלאה</span>
         </h2>
         
         <div data-aos="fade-up" data-aos-delay="400" class="max-w-3xl mx-auto px-4">
             <p class="text-slate-300 text-lg md:text-xl leading-relaxed font-light">
-                מערכת השקעות חכמה הממירה נתונים חיים לתובנות מדויקות.
-                <span class="block mt-2 font-normal text-slate-200">נבנתה מתוך צורך אישי, עכשיו היא שלך.</span>
+                 יצרתי לעצמי מערכת השקעות חכמה הממירה נתונים חיים לגרפים ותובנות באמצעות אוטומציה מלאה
+                <span class="block mt-3 font-bold text-cyber-accent text-xl md:text-2xl">עכשיו היא זמינה גם עבורך.</span>
             </p>
         </div>
     </header>
@@ -158,11 +160,11 @@
         <div class="relative bg-[#0e1629] rounded-2xl md:rounded-[2rem] overflow-hidden">
             <div class="bg-[#1a253a] p-3 md:p-5 flex items-center gap-3 border-b border-white/5 backdrop-blur-md">
                 <div class="flex gap-2">
-                    <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
-                    <div class="w-2.5 h-2.5 rounded-full bg-slate-600"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                    <div class="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
                 </div>
-                <span class="text-cyber-accent text-[10px] md:text-xs font-mono tracking-[0.2em] uppercase opacity-70 ml-2">/// Live_Data_Terminal</span>
+                <span class="text-slate-400 text-[10px] md:text-xs font-mono tracking-[0.1em] opacity-80 ml-2">MY_PORTFOLIO_DASHBOARD</span>
             </div>
             
             <div class="w-full relative">
@@ -174,8 +176,8 @@
 
     <div class="w-full max-w-7xl mb-24 px-4 relative text-center z-10">
         <div class="mb-16" data-aos="fade-up">
-            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">היתרון הבלתי הוגן שלך</h3>
-            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">כל פיסת מידע קריטית, מזוקקת למסך אחד.</p>
+            <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">למה זה הכלי היחיד שחסר לך?</h3>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">כל האינפורמציה שמשקיע צריך תחת קורת גג אחת, אפס פשרות.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
@@ -185,13 +187,13 @@
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">📊</div>
                     <h4 class="font-bold text-2xl text-white mb-4">ניתוח ביצועים אובייקטיבי</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        תשואה דולרית vs שקלית vs מדד ה-S&P 500. הכל מנורמל אוטומטית לתאריך הכניסה המדויק של כל פוזיציה.
+                        תשואה דולרית vs שקלית vs מדד ה-S&P 500, כאשר כולם מנורמלים לתאריך הכניסה המדויק.
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">הערכת ביצועים אמיתית מול השוק</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת הערכת הביצועים האמיתיים מול השוק</span>
                     </div>
                 </div>
             </div>
@@ -199,15 +201,15 @@
             <div data-aos="fade-up" data-aos-delay="150" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">💰</div>
-                    <h4 class="font-bold text-2xl text-white mb-4">הערכת "כסף בכיס" (Net)</h4>
+                    <h4 class="font-bold text-2xl text-white mb-4">הערכת "כסף בכיף"</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        לא רק "על הנייר". סימולציית מס רווחי הון ושערי מט"ח בזמן אמת כדי שתדע כמה באמת שלך.
+                        מעקב שווי נקי הכולל סימולציית מיסוי ושערי מט"ח בלייב (Live Data).
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">שווי נקי (After-tax) בכל רגע נתון</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת הערכת היתרה נטו (After-tax) בכל רגע</span>
                     </div>
                 </div>
             </div>
@@ -215,15 +217,15 @@
             <div data-aos="fade-up" data-aos-delay="300" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">🎯</div>
-                    <h4 class="font-bold text-2xl text-white mb-4">מגדל פיקוח (KPIs)</h4>
+                    <h4 class="font-bold text-2xl text-white mb-4">טבלת מעקב של התיק האישי</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        ריכוז אינדיקטורים קריטיים: P/E, PEG, Drawdown מהשיא. הכל מותאם אישית לזיהוי חריגות.
+                        המרכזת אינדיקטורים (KPIs) כמו P/E, PEG ו-Drawdown (אחוז שינוי ממחיר השיא), בהתאמה מלאה לצרכי המעקב שלי.
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">ניהול סיכונים וזיהוי הזדמנויות מיידי</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת זיהוי הזדמנויות וניהול סיכונים מהיר</span>
                     </div>
                 </div>
             </div>
@@ -231,15 +233,15 @@
             <div data-aos="fade-up" data-aos-delay="0" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">🥧</div>
-                    <h4 class="font-bold text-2xl text-white mb-4">בקרת חשיפות (Allocation)</h4>
+                    <h4 class="font-bold text-2xl text-white mb-4">הקצאת נכסים (Allocation)</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        ויזואליזציה ברורה של פיזור התיק. צפה בחשיפה ברמת המניה הבודדת וברמת הסקטור.
+                        ויזואליזציה מלאה של פיזור התיק ברמת המניה הבודדת וברמת הסקטור כולו.
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">מניעת ריכוזיות יתר בתיק</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת ניהול חשיפות אקטיבי ומניעת ריכוזיות יתר</span>
                     </div>
                 </div>
             </div>
@@ -247,15 +249,15 @@
             <div data-aos="fade-up" data-aos-delay="150" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">📈</div>
-                    <h4 class="font-bold text-2xl text-white mb-4">גרף Benchmark אישי</h4>
+                    <h4 class="font-bold text-2xl text-white mb-4">גרף תשואה מול Benchmark</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        השוואה גרפית מדויקת של התפתחות התיק שלך מול מדד הייחוס (S&P 500), מהיום הראשון.
+                        גרף ויזואלי של תשואת האחזקות מול ה-S&P 500 החל מתאריך הכניסה האישי שלך.
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">בחינת קורלציה ועוצמה יחסית</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת בחינת עוצמת התיק והקורלציה לשוק</span>
                     </div>
                 </div>
             </div>
@@ -263,15 +265,15 @@
             <div data-aos="fade-up" data-aos-delay="300" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyber-accent-low w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent">👀</div>
-                    <h4 class="font-bold text-2xl text-white mb-4">רשימת מעקב חכמה (Watchlist)</h4>
+                    <h4 class="font-bold text-2xl text-white mb-4">רשימת מעקב (Watchlist)</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                        גיליון נפרד למעקב אחר מניות פוטנציאליות עם אותם כלים ואינדיקטורים מתקדמים.
+                        גיליון צמוד עם רשימת מעקב מסודרת ויכולת התאמת אינדיקטורים אישית.
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5">
                     <div class="flex items-center gap-3">
-                        <span class="text-cyber-accent">●</span>
-                        <span class="text-slate-300 font-medium text-sm">שמירה על סדר בתהליך המחקר</span>
+                        <span class="text-cyber-accent">✓</span>
+                        <span class="text-slate-300 font-medium text-sm">לטובת סדר מופתי בשיטת המעקב המותאמת אישית</span>
                     </div>
                 </div>
             </div>
@@ -280,57 +282,57 @@
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-6xl glass-hardware rounded-2xl md:rounded-[2rem] p-8 md:p-12 mb-24 shadow-2xl relative z-10 text-right">
-        <h2 class="text-2xl md:text-4xl font-bold mb-12 text-white border-b border-white/10 pb-6">פרוטוקול הפעלה</h2>
+        <h2 class="text-2xl md:text-4xl font-bold mb-12 text-white border-b border-white/10 pb-6">הנחיות למשתמש</h2>
         
         <div class="bg-blue-950/40 border border-blue-400/20 p-5 md:p-6 rounded-2xl mb-12 flex items-start gap-5">
             <div class="text-2xl md:text-3xl text-blue-400">💡</div>
             <div>
-                <h3 class="font-bold text-blue-200 mb-2 text-xl">למשתמשי Google Sheets חדשים</h3>
+                <h3 class="font-bold text-blue-200 mb-2 text-xl">טיפ לחדשים ב-Google Sheets</h3>
                 <p class="text-blue-100/70 text-base leading-relaxed font-light">
-                    לפעולות בטבלה (כמו הוספת מניה): קליק ימני על תא בטבלה -> בחרו ב-<strong>"הוספת שורה"</strong> או <strong>"מחיקת שורה"</strong>. הנוסחאות יתעדכנו אוטומטית.
+                    בטבלאות המובנות: הוספה או מחיקה של שורה תתבצע באמצעות לחיצה ימנית על תא בתוך הטבלה ואז תבחרו לפי צורך --> <strong>הוספת שורה מעל/מתחת</strong> או <strong>"מחיקת שורה"</strong>.
                 </p>
             </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <div class="bg-[#131c2e]/60 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all group">
-                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">1. אתחול מערכת (Setup)</div>
+                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">1. הגדרות ראשוניות</div>
                 <ul class="space-y-4 text-slate-300 text-base font-light">
                     <li class="flex items-start gap-3">
                         <span class="text-cyber-accent mt-1">▹</span>
-                        <span><strong>תאריך התחלה:</strong> הגדר ל"אתמול" לטעינה ראשונית מהירה.</span>
+                        <span><strong>תאריך התחלה:</strong> שנו ל"אתמול" לטעינה מהירה של הנתונים בשימוש הראשון.</span>
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="text-cyber-accent mt-1">▹</span>
-                        <span><strong>עמלות:</strong> הזן עמלת קנייה/מכירה ממוצעת (לדוגמה: 1.5$).</span>
+                        <span><strong>עמלות:</strong> הזינו את גובה העמלה הממוצעת שלכם לפעולה (לדוגמה: 1.5$).</span>
                     </li>
                 </ul>
             </div>
 
             <div class="bg-[#131c2e]/60 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all group">
-                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">2. הזנת פורטפוליו (Data Entry)</div>
-                <p class="text-slate-300 text-base mb-4 font-light">בטבלה המרכזית, הזן את נתוני הפוזיציות:</p>
+                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">2. הזנת התיק (My Portfolio)</div>
+                <p class="text-slate-300 text-base mb-4 font-light">גשו לטבלה המרכזית והזינו את נתוני המניות:</p>
                 <div class="grid grid-cols-2 gap-3 text-slate-400 text-xs md:text-sm text-center font-mono">
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">TIP! (סימול)</span>
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">QTY (כמות)</span>
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">AVG COST (מחיר)</span>
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">SECTOR (סקטור)</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 טיקר (סימול)</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 כמות יחידות</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 מחיר קנייה</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 סקטור</span>
                 </div>
             </div>
 
             <div class="bg-[#131c2e]/60 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all group">
-                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">3. היסטוריית מימושים (History)</div>
-                <p class="text-slate-300 text-base mb-4 font-light">בטבלת History (מימין), תיעוד עסקאות סגורות:</p>
+                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">3. ניהול היסטוריה (History)</div>
+                <p class="text-slate-300 text-base mb-4 font-light">גשו לטבלת History בצד הימני והזינו:</p>
                 <div class="grid grid-cols-2 gap-3 text-slate-400 text-xs md:text-sm text-center font-mono">
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">TICKER + RETURN %</span>
-                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">REALIZED P/L ($)</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 טיקר + אחוז תשואה</span>
+                    <span class="bg-[#0e1629] p-3 rounded-lg border border-white/10">🔹 סך רווח/הפסד (לפני מס)</span>
                 </div>
             </div>
 
             <div class="bg-[#131c2e]/60 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all group">
-                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">4. שיגור (Launch)</div>
+                <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 group-hover:translate-x-2 transition-transform inline-block">4. Launch</div>
                 <p class="text-slate-300 text-lg leading-relaxed font-light">
-                    החזר את תאריך ההתחלה לתאריך המקורי. המתן כ-30 שניות לסנכרון נתונים מלא מול הבורסה. <strong class="text-cyber-accent font-normal">המערכת מבצעית.</strong>
+                    שנו את התאריך חזרה לתאריך המקורי, המתינו כחצי דקה לסנכרון מול הבורסה, והכל מוכן לעבודה!
                 </p>
             </div>
         </div>
@@ -341,37 +343,37 @@
            onclick="logClick(); gtag('event', 'duplicate_dashboard');"
            class="animate-main-button-cyber bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0e1629] font-extrabold py-5 md:py-6 px-10 md:px-16 rounded-full text-xl md:text-2xl transition-all shadow-[0_0_50px_-10px_rgba(6,182,212,0.5)] inline-flex items-center gap-4 w-full md:w-auto justify-center tracking-wide">
             <span>🚀</span>
-            <span>קבל גישה מיידית למערכת (חינם)</span>
+            <span>שכפל את הדאשבורד עכשיו (חינם)</span>
         </a>
         <div class="text-sm text-slate-400 font-light flex items-center gap-2 opacity-90">
-            <span class="text-cyber-accent">⚡</span>
-            <span>כבר בשימוש על ידי</span>
+            <span>🔥</span>
             <span id="click-counter" class="text-cyber-light font-bold text-lg">...</span>
-            <span>משקיעים</span>
+            <span>משקיעים לחצו עלי לפניך</span>
         </div>
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-2xl glass-invite rounded-2xl p-8 mb-16 text-center shadow-lg mx-auto mx-4 relative z-10 backdrop-blur-sm">
         <p class="text-slate-300 text-lg md:text-xl mb-6 font-light">
-            עדיין אין לך חשבון מסחר עצמאי?
+            אם אתה חדש אבל התחום מדבר אליך?
         </p>
         <div class="animate-pulse-link">
             <a href="YOUR_REFERRAL_LINK_HERE" target="_blank" 
                onclick="gtag('event', 'open_investment_account');"
                class="text-cyber-accent font-bold text-2xl md:text-3xl hover:text-cyber-light transition-all underline decoration-cyan-500/30 underline-offset-8">
-                התחל לסחור (הטבת הצטרפות)
+                פתח תיק השקעות אישי עכשיו
             </a>
         </div>
     </div>
 
-    <div class="text-center mb-8 text-xs text-slate-600 font-mono tracking-wider z-10 relative">
-        // SYSTEM STATUS: ONLINE // VISITORS: <span id="visit-counter" class="font-bold text-cyber-accent">...</span>
+    <div class="text-center mb-8 text-xs text-slate-500 font-mono tracking-wider z-10 relative">
+        <span id="visit-counter" class="font-bold text-cyber-accent">...</span>
+        <span>מתעניינים ביקרו פה לפניך </span>
     </div>
 
     <footer class="w-full max-w-[90rem] border-t border-white/5 pt-10 pb-12 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-6 px-6 relative z-10 bg-[#0b1121]/80 backdrop-blur-md">
         <div class="text-center md:text-right">
             <p class="font-bold text-slate-200 text-xl mb-1">אלדר שמחון</p>
-            <p class="text-sm font-light opacity-80">Engineering & Financial Data</p>
+            <p class="text-sm font-light opacity-80">סטודנט להנדסת תעשיה וניהול</p>
         </div>
         <div class="flex gap-8 items-center">
             <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" 
