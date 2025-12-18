@@ -33,8 +33,8 @@
       </script>
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Assistant', sans-serif; 
@@ -46,7 +46,6 @@
         }
         h1 { font-family: 'Outfit', sans-serif; } 
         
-        /* רקע אטמוספרי */
         .ambient-background {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -64,7 +63,6 @@
             filter: blur(120px);
         }
 
-        /* כותרת מפלצתית בסגנון WIX */
         .hero-title {
             font-size: clamp(3.5rem, 13vw, 9rem);
             line-height: 0.9;
@@ -73,7 +71,6 @@
             text-transform: uppercase;
         }
 
-        /* מסגרת הייטק (HUD Box) */
         .tech-frame {
             position: relative;
             background: rgba(6, 182, 212, 0.03);
@@ -81,7 +78,6 @@
             backdrop-filter: blur(10px);
         }
         
-        /* פינות טכנולוגיות למסגרת */
         .tech-frame::before, .tech-frame::after {
             content: '';
             position: absolute;
@@ -93,7 +89,6 @@
         .tech-frame::before { top: -1px; left: -1px; border-bottom: none; border-right: none; }
         .tech-frame::after { bottom: -1px; right: -1px; border-top: none; border-left: none; }
 
-        /* קווים דקורטיביים */
         .tech-line {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(6,182,212,0.5), transparent);
@@ -101,7 +96,6 @@
             margin: 2rem 0;
         }
 
-        /* שאר האלמנטים */
         .glass-hardware { 
             background: rgba(15, 23, 42, 0.75); 
             backdrop-filter: blur(16px); 
@@ -148,7 +142,6 @@
     </div>
 
     <header class="w-full max-w-[90rem] mt-16 md:mt-24 mb-20 px-4 flex flex-col items-center text-center z-10">
-        
         <div data-aos="fade-down" data-aos-duration="1000" class="mb-12 md:mb-16 w-full">
             <h1 class="hero-title text-cyber-gradient tracking-tighter">
                 The Ultimate<br>Dashboard
@@ -160,7 +153,6 @@
                 <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#0b1121] px-4 text-xs font-mono text-cyber-accent tracking-[0.2em] border border-cyber-accent/30 rounded-full">
                     CLARITY STARTS HERE
                 </div>
-
                 <h2 class="text-2xl md:text-5xl text-white font-bold tracking-tight leading-tight">
                     הדרך שלך להשיג <span class="text-cyber-accent">שליטה פיננסית מלאה</span>
                 </h2>
@@ -178,7 +170,6 @@
                 <span class="block mt-2 font-medium text-white">עכשיו היא זמינה גם עבורך.</span>
             </p>
         </div>
-
     </header>
 
     <div data-aos="zoom-in-up" data-aos-duration="1200" class="w-full max-w-7xl glass-hardware rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl mb-24 relative group z-20">
@@ -237,7 +228,7 @@
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">המרכזת אינדיקטורים (KPIs) כמו P/E, PEG ו-Drawdown (אחוז שינוי ממחיר השיא), בהתאמה מלאה לצרכי המעקב שלי.</p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5 flex items-center gap-3">
-                    <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת זיהוי הזדמנויות וניהול סיכונים מהיר</span>
+                    <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת זיהוי הזדמויות וניהול סיכונים מהיר</span>
                 </div>
             </div>
 
@@ -278,7 +269,6 @@
 
     <div data-aos="fade-up" class="w-full max-w-6xl glass-hardware rounded-2xl md:rounded-[2rem] p-8 md:p-12 mb-24 shadow-2xl relative z-10 text-right">
         <h2 class="text-2xl md:text-4xl font-bold mb-12 text-white border-b border-white/10 pb-6">הנחיות למשתמש</h2>
-        
         <div class="bg-blue-950/40 border border-blue-400/20 p-5 md:p-6 rounded-2xl mb-12 flex items-start gap-5">
             <div class="text-2xl md:text-3xl text-blue-400">💡</div>
             <div>
@@ -286,7 +276,6 @@
                 <p class="text-blue-100/70 text-base leading-relaxed font-light">בטבלאות המובנות: הוספה או מחיקה של שורה תתבצע באמצעות לחיצה ימנית על תא בתוך הטבלה ואז תבחרו לפי צורך --> <strong>הוספת שורה מעל/מתחת</strong> או <strong>"מחיקת שורה"</strong>.</p>
             </div>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             <div class="bg-[#131c2e]/60 p-6 md:p-8 rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all">
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-4 inline-block">1. הגדרות ראשוניות</div>
@@ -351,10 +340,9 @@
         <a id="coffee-link" href="https://paypal.me/EldarSimhon/4" target="_blank" onclick="gtag('event', 'buy_coffee');" 
            class="w-full bg-gradient-to-r from-cyber-dark to-slate-900 border border-cyber-accent/50 hover:border-cyber-accent text-cyber-accent font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2 group">
            <span>Support</span>
-           <span id="price-display" class="bg-[#0e1629] text-cyber-accent border border-cyber-accent/30 px-3 py-1 rounded-lg text-lg font-bold shadow-lg">$4</span>
+           <span id="price-display" class="bg-[#0b1121] text-cyber-accent border border-cyber-accent/30 px-3 py-0.5 rounded text-sm font-bold group-hover:scale-110 transition-transform">$4</span>
         </a>
-        <p class="text-[10px] text-slate-400 mt-2 tracking-widest uppercase">($4 / Cup)</p>
-        <p class="text-[10px] text-slate-500 mt-1 opacity-60">* התשלום עובר ישירות לפייפאל</p>
+        <p class="text-[10px] text-slate-500 mt-3 opacity-60">* התשלום עובר ישירות לפייפאל (ללא עמלות צד ג')</p>
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-2xl glass-invite rounded-2xl p-8 mb-16 text-center shadow-lg mx-auto mx-4 relative z-10 backdrop-blur-sm">
@@ -367,19 +355,15 @@
         </div>
     </div>
 
-    <footer class="w-full max-w-[90rem] border-t border-white/5 pt-10 pb-12 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-6 px-6 relative z-10 bg-[#0b1121]/80 backdrop-blur-md">
-        
-        <div class="text-center md:text-right flex flex-col items-center md:items-start gap-1">
-            <p class="font-bold text-slate-200 text-xl mb-1">אלדר שמחון</p>
-            <p class="text-sm font-light opacity-80 mb-2">סטודנט להנדסת תעשיה וניהול</p>
-            
-            <div class="flex items-center gap-2 text-xs font-mono tracking-wider bg-white/5 px-3 py-1 rounded-full border border-white/5">
-                <span class="text-cyber-accent">👁️</span>
-                <span id="visit-counter" class="font-bold text-white">...</span>
-                <span>ביקרו פה לפניך</span>
-            </div>
-        </div>
+    <div class="text-center mb-8 text-xs text-slate-500 font-mono tracking-wider z-10 relative">
+        <span id="visit-counter" class="font-bold text-cyber-accent">...</span><span>מתעניינים ביקרו פה לפניך</span>
+    </div>
 
+    <footer class="w-full max-w-[90rem] border-t border-white/5 pt-10 pb-12 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-6 px-6 relative z-10 bg-[#0b1121]/80 backdrop-blur-md">
+        <div class="text-center md:text-right">
+            <p class="font-bold text-slate-200 text-xl mb-1">אלדר שמחון</p>
+            <p class="text-sm font-light opacity-80">סטודנט להנדסת תעשיה וניהול</p>
+        </div>
         <div class="flex gap-8 items-center">
             <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" onclick="gtag('event', 'click_linkedin');"
                class="hover:text-cyber-accent transition-colors flex items-center gap-3 bg-white/5 px-4 py-2 rounded-full group">
