@@ -136,6 +136,9 @@
             50% { transform: scale(1.05); opacity: 0.8; }
         }
         .animate-pulse-link { animation: pulse-soft 2s infinite ease-in-out; display: inline-block; }
+
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-6 overflow-x-hidden">
@@ -317,7 +320,7 @@
         </div>
     </div>
 
-    <div data-aos="zoom-in" class="text-center mb-24 flex flex-col items-center gap-6 px-4 relative z-10">
+    <div data-aos="zoom-in" class="text-center mb-16 flex flex-col items-center gap-6 px-4 relative z-10">
         <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
            onclick="logClick(); gtag('event', 'duplicate_dashboard');"
            class="animate-main-button-cyber bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0e1629] font-extrabold py-5 md:py-6 px-10 md:px-16 rounded-full text-xl md:text-2xl transition-all shadow-[0_0_50px_-10px_rgba(6,182,212,0.5)] inline-flex items-center gap-4 w-full md:w-auto justify-center tracking-wide">
@@ -326,6 +329,31 @@
         <div class="text-sm text-slate-400 font-light flex items-center gap-2 opacity-90">
             <span>🔥</span><span id="click-counter" class="text-cyber-light font-bold text-lg">...</span><span>משקיעים לחצו עלי לפניך</span>
         </div>
+    </div>
+
+    <div data-aos="fade-up" class="w-full max-w-sm mx-auto mb-24 p-6 rounded-3xl border border-cyber-accent/20 bg-[#0e1629]/80 backdrop-blur-md shadow-[0_0_30px_-10px_rgba(6,182,212,0.15)] text-center relative z-20">
+        <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#0b1121] p-3 rounded-full border border-cyber-accent/30 shadow-lg">
+            <span class="text-3xl">☕</span>
+        </div>
+        
+        <h3 class="text-xl font-bold text-white mt-4 mb-2">Buy me a Coffee</h3>
+        <p class="text-slate-400 text-sm font-light mb-6">אם הדאשבורד עזר לך, אשמח לפרגון קטן :)</p>
+        
+        <div class="flex items-center justify-center gap-4 mb-6">
+            <button onclick="changeCoffee(-1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all flex items-center justify-center text-xl font-bold select-none cursor-pointer">-</button>
+            <div class="flex flex-col items-center w-16">
+                <span id="cup-count" class="text-3xl font-bold text-cyber-accent font-mono">1</span>
+                <span class="text-[10px] text-slate-500 uppercase tracking-wider">Cups</span>
+            </div>
+            <button onclick="changeCoffee(1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all flex items-center justify-center text-xl font-bold select-none cursor-pointer">+</button>
+        </div>
+
+        <a id="coffee-link" href="https://paypal.me/EldarSimhon/4" target="_blank" onclick="gtag('event', 'buy_coffee');" 
+           class="w-full bg-gradient-to-r from-cyber-dark to-slate-900 border border-cyber-accent/50 hover:border-cyber-accent text-cyber-accent font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2 group">
+           <span>Support</span>
+           <span id="price-display" class="bg-cyber-accent text-[#0b1121] px-2 py-0.5 rounded text-sm font-bold group-hover:scale-110 transition-transform">$4</span>
+        </a>
+        <p class="text-[10px] text-slate-500 mt-3 opacity-60">* התשלום עובר ישירות לפייפאל (ללא עמלות צד ג')</p>
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-2xl glass-invite rounded-2xl p-8 mb-16 text-center shadow-lg mx-auto mx-4 relative z-10 backdrop-blur-sm">
@@ -354,8 +382,8 @@
                 <span class="text-sm font-medium">LinkedIn</span>
             </a>
             
-            <a href="C.V Eldar Simhon.pdf" 
-               download="C.V Eldar Simhon.pdf" 
+            <a href="CV_Eldar_Simhon.pdf" 
+               download="CV_Eldar_Simhon.pdf" 
                target="_blank" 
                onclick="gtag('event', 'download_cv');"
                class="hover:text-cyber-accent transition-colors text-sm font-medium border-b border-transparent hover:border-cyber-accent pb-1">
@@ -368,6 +396,24 @@
     <script>
         AOS.init({ duration: 1000, once: true, offset: 80, easing: 'ease-out-quart' });
     </script>
+    
+    <script>
+        let cupCount = 1;
+        const pricePerCup = 4;
+        const paypalBase = "https://paypal.me/EldarSimhon/";
+
+        function changeCoffee(amount) {
+            cupCount += amount;
+            if (cupCount < 1) cupCount = 1; 
+            
+            document.getElementById('cup-count').innerText = cupCount;
+            const totalPrice = cupCount * pricePerCup;
+            document.getElementById('price-display').innerText = '$' + totalPrice;
+            
+            document.getElementById('coffee-link').href = paypalBase + totalPrice;
+        }
+    </script>
+
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhUwEbmfu5Axy0A13Iu3a_uVwR3WfBYWpX1j9iGq9z8hcaJ3XZId8am5z4Qg1aRmLHlg/exec";
         function logVisit() {
