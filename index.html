@@ -46,7 +46,6 @@
         }
         h1 { font-family: 'Outfit', sans-serif; } 
         
-        /* רקע אטמוספרי */
         .ambient-background {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -64,7 +63,6 @@
             filter: blur(120px);
         }
 
-        /* כותרת מפלצתית בסגנון WIX */
         .hero-title {
             font-size: clamp(3.5rem, 13vw, 9rem);
             line-height: 0.9;
@@ -73,7 +71,6 @@
             text-transform: uppercase;
         }
 
-        /* מסגרת הייטק (HUD Box) */
         .tech-frame {
             position: relative;
             background: rgba(6, 182, 212, 0.03);
@@ -81,7 +78,6 @@
             backdrop-filter: blur(10px);
         }
         
-        /* פינות טכנולוגיות למסגרת */
         .tech-frame::before, .tech-frame::after {
             content: '';
             position: absolute;
@@ -93,7 +89,6 @@
         .tech-frame::before { top: -1px; left: -1px; border-bottom: none; border-right: none; }
         .tech-frame::after { bottom: -1px; right: -1px; border-top: none; border-left: none; }
 
-        /* קווים דקורטיביים */
         .tech-line {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(6,182,212,0.5), transparent);
@@ -101,7 +96,6 @@
             margin: 2rem 0;
         }
 
-        /* שאר האלמנטים */
         .glass-hardware { 
             background: rgba(15, 23, 42, 0.75); 
             backdrop-filter: blur(16px); 
@@ -337,7 +331,7 @@
         <h3 class="text-xl font-bold text-white mt-4 mb-2">Buy me a Coffee</h3>
         
         <p class="text-slate-400 text-sm font-light">אם הדאשבורד עזר לך, אשמח לפרגון קטן :)</p>
-        <p class="text-cyber-accent text-lg font-bold transform -rotate-2 mt-1 mb-5" style="font-family: 'Outfit', sans-serif;">+ פידבק כנה ✍️</p>
+        <p class="text-cyber-accent text-sm font-light mt-0.5 mb-6">+ פידבק כנה ✍️</p>
         
         <div class="flex items-center justify-center gap-4 mb-6">
             <button onclick="changeCoffee(-1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 text-white border border-white/10 transition-all flex items-center justify-center text-xl font-bold select-none cursor-pointer">-</button>
@@ -349,9 +343,9 @@
         </div>
 
         <a id="coffee-link" href="https://paypal.me/EldarSimhon/4" target="_blank" onclick="gtag('event', 'buy_coffee');" 
-           class="w-full bg-gradient-to-r from-cyber-dark to-slate-900 border border-cyber-accent/50 hover:border-cyber-accent text-cyber-accent font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-4 group">
+           class="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0e1629] font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-3 group">
            <span class="text-lg">Support</span>
-           <span id="price-display" class="text-cyber-accent text-3xl font-extrabold ml-1 group-hover:scale-110 transition-transform">$4</span>
+           <span id="price-display" class="bg-[#0e1629]/10 px-3 py-0.5 rounded-lg text-xl font-extrabold group-hover:bg-[#0e1629]/20 transition-colors">$4</span>
         </a>
         
         <p class="text-[11px] text-slate-400 mt-4 font-medium">
