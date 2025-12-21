@@ -115,6 +115,25 @@
             box-shadow: 0 20px 40px -20px rgba(6, 182, 212, 0.2);
         }
 
+        /* Accordion Style for Mobile */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+        details[open] .arrow-icon {
+            transform: rotate(180deg);
+        }
+
+
         .text-cyber-gradient { background: linear-gradient(to right, #67e8f9, #2dd4bf); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .text-cyber-accent { color: #67e8f9; }
         
@@ -133,16 +152,6 @@
 
         input[type=number]::-webkit-inner-spin-button, 
         input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
-
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-6 overflow-x-hidden">
@@ -205,15 +214,14 @@
 
     <div class="tech-line opacity-30"></div>
 
-    <div class="w-full max-w-7xl mb-24 relative text-center z-10">
-        <div class="mb-10 md:mb-16 px-4" data-aos="fade-up">
+    <div class="w-full max-w-7xl mb-24 px-4 relative text-center z-10">
+        <div class="mb-12" data-aos="fade-up">
             <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">למה זה הכלי היחיד שחסר לך?</h3>
             <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">כל האינפורמציה שמשקיע צריך תחת קורת גג אחת, אפס פשרות.</p>
         </div>
 
-        <div class="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 text-right overflow-x-auto snap-x snap-mandatory pb-8 md:pb-0 px-4 no-scrollbar">
-            
-            <div data-aos="fade-up" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-right">
+            <div data-aos="fade-up" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">📊</div>
                     <h4 class="font-bold text-2xl text-white mb-4">ניתוח ביצועים אובייקטיבי</h4>
@@ -223,8 +231,7 @@
                     <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת הערכת הביצועים האמיתיים מול השוק</span>
                 </div>
             </div>
-
-            <div data-aos="fade-up" data-aos-delay="100" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+            <div data-aos="fade-up" data-aos-delay="100" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">💰</div>
                     <h4 class="font-bold text-2xl text-white mb-4">הערכת "כסף בכיף"</h4>
@@ -234,8 +241,7 @@
                     <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת הערכת היתרה נטו (After-tax) בכל רגע</span>
                 </div>
             </div>
-
-            <div data-aos="fade-up" data-aos-delay="200" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+            <div data-aos="fade-up" data-aos-delay="200" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">🎯</div>
                     <h4 class="font-bold text-2xl text-white mb-4">טבלת מעקב של התיק האישי</h4>
@@ -245,8 +251,7 @@
                     <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת זיהוי הזדמנויות וניהול סיכונים מהיר</span>
                 </div>
             </div>
-
-            <div data-aos="fade-up" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+            <div data-aos="fade-up" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">🥧</div>
                     <h4 class="font-bold text-2xl text-white mb-4">הקצאת נכסים (Allocation)</h4>
@@ -256,8 +261,7 @@
                     <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת ניהול חשיפות אקטיבי ומניעת ריכוזיות יתר</span>
                 </div>
             </div>
-
-            <div data-aos="fade-up" data-aos-delay="100" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+            <div data-aos="fade-up" data-aos-delay="100" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">📈</div>
                     <h4 class="font-bold text-2xl text-white mb-4">גרף תשואה מול Benchmark</h4>
@@ -267,8 +271,7 @@
                     <span class="text-cyber-accent">✓</span><span class="text-slate-300 font-medium text-sm">לטובת בחינת עוצמת התיק והקורלציה לשוק</span>
                 </div>
             </div>
-
-            <div data-aos="fade-up" data-aos-delay="200" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-auto min-h-[320px] min-w-[85vw] md:min-w-0 snap-center shrink-0">
+            <div data-aos="fade-up" data-aos-delay="200" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">👀</div>
                     <h4 class="font-bold text-2xl text-white mb-4">רשימת מעקב (Watchlist)</h4>
@@ -280,8 +283,104 @@
             </div>
         </div>
 
-        <div class="md:hidden absolute left-4 bottom-32 animate-pulse text-cyber-accent opacity-70 pointer-events-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+        <div class="md:hidden flex flex-col gap-3 text-right">
+            
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">📊</div>
+                        <h4 class="font-bold text-lg text-white">ניתוח ביצועים אובייקטיבי</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">תשואה דולרית vs שקלית vs מדד ה-S&P 500, כאשר כולם מנורמלים לתאריך הכניסה המדויק.</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>להערכת הביצועים האמיתיים</span>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">💰</div>
+                        <h4 class="font-bold text-lg text-white">הערכת "כסף בכיף"</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">מעקב שווי נקי הכולל סימולציית מיסוי ושערי מט"ח בלייב (Live Data).</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>להערכת היתרה נטו (After-tax)</span>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">🎯</div>
+                        <h4 class="font-bold text-lg text-white">טבלת מעקב אישית</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">אינדיקטורים (KPIs) כמו P/E, PEG ו-Drawdown בהתאמה מלאה לצרכי המעקב שלי.</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>לזיהוי הזדמנויות וניהול סיכונים</span>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">🥧</div>
+                        <h4 class="font-bold text-lg text-white">הקצאת נכסים (Allocation)</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">ויזואליזציה מלאה של פיזור התיק ברמת המניה הבודדת וברמת הסקטור כולו.</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>למניעת ריכוזיות יתר</span>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">📈</div>
+                        <h4 class="font-bold text-lg text-white">גרף תשואה מול Benchmark</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">גרף ויזואלי של תשואת האחזקות מול ה-S&P 500 החל מתאריך הכניסה האישי שלך.</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>לבחינת עוצמת התיק</span>
+                    </div>
+                </div>
+            </details>
+
+            <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
+                <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
+                    <div class="flex items-center gap-4">
+                        <div class="text-xl">👀</div>
+                        <h4 class="font-bold text-lg text-white">רשימת מעקב (Watchlist)</h4>
+                    </div>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2">
+                    <p class="text-sm leading-relaxed mb-3">גיליון צמוד עם רשימת מעקב מסודרת ויכולת התאמת אינדיקטורים אישית.</p>
+                    <div class="flex items-center gap-2 text-xs font-medium text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg inline-flex">
+                        <span>✓</span><span>לסדר מופתי</span>
+                    </div>
+                </div>
+            </details>
+
         </div>
     </div>
 
