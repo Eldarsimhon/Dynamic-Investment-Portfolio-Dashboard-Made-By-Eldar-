@@ -43,7 +43,6 @@
             -webkit-font-smoothing: antialiased; 
             overflow-x: hidden; 
             position: relative;
-            /* Ensure text wraps correctly everywhere */
             overflow-wrap: break-word;
             word-wrap: break-word;
         }
@@ -67,7 +66,7 @@
         }
 
         .hero-title {
-            font-size: clamp(3.5rem, 13vw, 9rem);
+            font-size: clamp(2.8rem, 12vw, 9rem);
             line-height: 0.9;
             font-weight: 900;
             letter-spacing: -0.03em;
@@ -118,43 +117,22 @@
             box-shadow: 0 20px 40px -20px rgba(6, 182, 212, 0.2);
         }
 
-        /* Accordion Style for Mobile */
-        details > summary {
-            list-style: none;
-        }
-        details > summary::-webkit-details-marker {
-            display: none;
-        }
-        details[open] summary ~ * {
-            animation: sweep .3s ease-in-out;
-        }
-        @keyframes sweep {
-            0%    {opacity: 0; transform: translateY(-10px)}
-            100%  {opacity: 1; transform: translateY(0)}
-        }
-        details[open] .arrow-icon {
-            transform: rotate(180deg);
-        }
-
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep { 0% {opacity: 0; transform: translateY(-10px)} 100% {opacity: 1; transform: translateY(0)} }
+        details[open] .arrow-icon { transform: rotate(180deg); }
 
         .text-cyber-gradient { background: linear-gradient(to right, #67e8f9, #2dd4bf); -webkit-background-clip: text; background-clip: text; color: transparent; }
         .text-cyber-accent { color: #67e8f9; }
         
-        @keyframes pulse-cyber {
-            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6); }
-            70% { box-shadow: 0 0 0 20px rgba(6, 182, 212, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
-        }
+        @keyframes pulse-cyber { 0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.6); } 70% { box-shadow: 0 0 0 20px rgba(6, 182, 212, 0); } 100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); } }
         .animate-main-button-cyber { animation: pulse-cyber 2.5s infinite; }
 
-        @keyframes pulse-soft {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-        }
+        @keyframes pulse-soft { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } }
         .animate-pulse-link { animation: pulse-soft 2s infinite ease-in-out; display: inline-block; }
 
-        input[type=number]::-webkit-inner-spin-button, 
-        input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-6 overflow-x-hidden">
@@ -164,26 +142,24 @@
     </div>
 
     <header class="w-full max-w-[90rem] mt-16 md:mt-24 mb-20 px-4 flex flex-col items-center text-center z-10">
-        
         <div data-aos="fade-down" data-aos-duration="1000" class="mb-12 md:mb-16 w-full">
             <h1 class="hero-title text-cyber-gradient tracking-tighter">
-                The Ultimate<br>Dashboard
+                The Ultimate<br><span class="whitespace-nowrap">Dashboard</span>
             </h1>
         </div>
 
         <div data-aos="zoom-in" data-aos-delay="200" class="w-full max-w-4xl mx-auto mb-12">
             <div class="tech-frame p-8 md:p-12 rounded-lg relative group hover:bg-cyan-950/20 transition-colors duration-500">
-                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#0b1121] px-4 text-xs font-mono text-cyber-accent tracking-[0.2em] border border-cyber-accent/30 rounded-full">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#0b1121] px-4 text-xs font-mono text-cyber-accent tracking-[0.2em] border border-cyber-accent/30 rounded-full text-center">
                     CLARITY STARTS HERE
                 </div>
-
                 <h2 class="text-2xl md:text-5xl text-white font-bold tracking-tight leading-tight">
                     הדרך שלך להשיג <span class="text-cyber-accent">שליטה פיננסית מלאה</span>
                 </h2>
             </div>
         </div>
 
-        <div data-aos="fade-up" data-aos-delay="400" class="max-w-2xl mx-auto">
+        <div data-aos="fade-up" data-aos-delay="400" class="max-w-2xl mx-auto text-center">
             <div class="flex items-center justify-center gap-4 mb-4 opacity-50">
                 <div class="h-[1px] w-12 bg-white"></div>
                 <div class="text-[10px] tracking-widest uppercase">Created By Eldar</div>
@@ -194,7 +170,6 @@
                 <span class="block mt-2 font-medium text-white">עכשיו היא זמינה גם עבורך.</span>
             </p>
         </div>
-
     </header>
 
     <div data-aos="zoom-in-up" data-aos-duration="1200" class="w-full max-w-7xl glass-hardware rounded-2xl md:rounded-[2rem] overflow-hidden shadow-2xl mb-24 relative group z-20">
@@ -208,9 +183,9 @@
                 </div>
                 <span class="text-slate-400 text-[10px] md:text-xs font-mono tracking-[0.1em] opacity-80 ml-2">MY_PORTFOLIO_DASHBOARD</span>
             </div>
-            <div class="w-full relative">
+            <div class="w-full relative text-center">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0e1629] via-transparent to-transparent opacity-20 pointer-events-none"></div>
-                <img src="dashboard.png" alt="Dashboard Preview" class="w-full h-auto object-contain block">
+                <img src="dashboard.png" alt="Dashboard Preview" class="w-full h-auto object-contain block mx-auto">
             </div>
         </div>
     </div>
@@ -220,10 +195,9 @@
     <div class="w-full max-w-7xl mb-24 px-4 relative text-center z-10">
         <div class="mb-12" data-aos="fade-up">
             <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">מה האוטומציה עושה עבורך?</h3>
-           
         </div>
 
-        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-right">
+        <div class="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-right text-right">
             <div data-aos="fade-up" class="feature-card-pro p-8 rounded-3xl flex flex-col justify-between h-full">
                 <div>
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">📊</div>
@@ -287,7 +261,6 @@
         </div>
 
         <div class="md:hidden flex flex-col gap-3 text-right">
-            
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
                     <div class="flex items-center gap-4 flex-1">
@@ -299,7 +272,7 @@
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">תשואה דולרית vs שקלית vs מדד ה-S&P 500, כאשר כולם מנורמלים לתאריך הכניסה המדויק.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת הערכת הביצועים האמיתיים</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת הערכת הביצועים האמיתיים</span>
                     </div>
                 </div>
             </details>
@@ -315,7 +288,7 @@
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">מעקב שווי נקי הכולל סימולציית מיסוי ושערי מט"ח בלייב (Live Data).</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת הערכת היתרה נטו (After-tax)</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת הערכת היתרה נטו (After-tax)</span>
                     </div>
                 </div>
             </details>
@@ -331,7 +304,7 @@
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">אינדיקטורים (KPIs) כמו P/E, PEG ו-Drawdown בהתאמה מלאה לצרכי המעקב שלי.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת זיהוי הזדמנויות וניהול סיכונים</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת זיהוי הזדמנויות וניהול סיכונים</span>
                     </div>
                 </div>
             </details>
@@ -340,14 +313,14 @@
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
                     <div class="flex items-center gap-4 flex-1">
                         <div class="text-xl shrink-0">🥧</div>
-                        <h4 class="font-bold text-lg text-white">הקצאת נכסים (Allocation)</h4>
+                        <h4 class="font-bold text-lg text-white">תרשימי אלוקציה</h4>
                     </div>
                     <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">ויזואליזציה מלאה של פיזור התיק ברמת המניה הבודדת וברמת הסקטור כולו.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת מניעת ריכוזיות יתר</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת מניעת ריכוזיות יתר</span>
                     </div>
                 </div>
             </details>
@@ -363,7 +336,7 @@
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">גרף ויזואלי של תשואת האחזקות מול ה-S&P 500 החל מתאריך הכניסה האישי שלך.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת בחינת עוצמת התיק</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת בחינת עוצמת התיק</span>
                     </div>
                 </div>
             </details>
@@ -379,25 +352,29 @@
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">גיליון צמוד עם רשימת מעקב מסודרת ויכולת התאמת אינדיקטורים אישית.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span class="break-words">לטובת סדר מופתי</span>
+                        <span class="shrink-0">✓</span><span class="break-words text-right">לטובת סדר מופתי</span>
                     </div>
                 </div>
             </details>
-
         </div>
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-6xl glass-hardware rounded-2xl md:rounded-[2rem] p-4 md:p-12 mb-16 md:mb-24 shadow-2xl relative z-10 text-right">
         <h2 class="text-2xl md:text-4xl font-bold mb-6 md:mb-12 text-white border-b border-white/10 pb-6">הנחיות למשתמש</h2>
-        <div class="bg-blue-950/40 border border-blue-400/20 p-4 md:p-6 rounded-xl md:rounded-2xl mb-6 md:mb-12 flex items-start gap-4 md:gap-5">
+        <div class="bg-blue-950/40 border border-blue-400/20 p-4 md:p-6 rounded-xl md:rounded-2xl mb-6 md:mb-12 flex items-start gap-4 md:gap-5 text-right">
             <div class="text-2xl md:text-3xl text-blue-400">💡</div>
             <div>
-                <h3 class="font-bold text-blue-200 mb-1 text-lg md:text-xl">טיפ לחדשים ב-Google Sheets</h3>
-                <p class="text-blue-100/70 text-sm md:text-base leading-relaxed font-light">דוגמא להוספת שורה- לחיצה ימנית על תא בתוך הטבלה ואז לבחור הוספת שורה בטבלה. ( כנ"ל עבור מחיקה ועבור עמודה)</p>
+                <h3 class="font-bold text-blue-200 mb-1 text-lg md:text-xl text-right">טיפ לחדשים ב-Google Sheets</h3>
+                <p class="text-blue-100/70 text-sm md:text-base leading-relaxed font-light text-right">דוגמא להוספת שורה- לחיצה ימנית על תא בתוך הטבלה ואז תבחר לפי צורך --> <strong>הוספת שורה מעל/מתחת</strong> או <strong>"מחיקת שורה"</strong>. ( כנ"ל עבור מחיקה ועבור עמודה)</p>
             </div>
         </div>
+        
+        <h2 class="text-white font-bold text-xl md:text-2xl text-center mb-8 leading-tight">
+            פעל לפי הסדר ותוך 2 דקות תשיג <span class="text-cyber-accent">שליטה על התיק שלך</span>
+        </h2>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-10">
-            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all">
+            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all text-right">
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-3 md:mb-4 inline-block">1. הזנת התיק (My Portfolio)</div>
                 <p class="text-slate-300 text-sm md:text-base mb-4 font-light leading-relaxed">גש לטבלה המרכזית והזן את נתוני המניות:</p>
                 <div class="grid grid-cols-2 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
@@ -407,7 +384,7 @@
                     <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 סקטור</span>
                 </div>
             </div>
-            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all">
+            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all text-right text-right">
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-3 md:mb-4 inline-block">2. ניהול היסטוריה (History)</div>
                 <p class="text-slate-300 text-sm md:text-base mb-4 font-light leading-relaxed">גש לטבלת History בצד הימני והזן:</p>
                 <div class="grid grid-cols-2 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
@@ -415,10 +392,9 @@
                     <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 סך רווח/הפסד</span>
                 </div>
             </div>
-            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all md:col-span-2">
+            <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all md:col-span-2 text-right">
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-3 md:mb-4 inline-block">3. סנכרון סופי</div>
                 <p class="text-slate-300 text-sm md:text-base mb-5 font-light">הזנת נתונים אחרוניים לדיוק מושלם:</p>
-                
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
                     <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 שינוי תאריך</span>
                     <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 הגדרת עלות עמלה</span>
@@ -428,29 +404,26 @@
         </div>
     </div>
 
-    <div data-aos="zoom-in" class="text-center mb-16 flex flex-col items-center gap-6 px-4 relative z-10">
+    <div data-aos="zoom-in" class="text-center mb-16 flex flex-col items-center gap-6 px-4 relative z-10 text-center text-center">
         <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
            onclick="logClick(); gtag('event', 'duplicate_dashboard');"
            class="animate-main-button-cyber bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0e1629] font-extrabold py-6 md:py-8 px-12 md:px-20 rounded-full text-2xl md:text-3xl transition-all shadow-[0_0_60px_-10px_rgba(6,182,212,0.6)] inline-flex items-center gap-4 w-full md:w-auto justify-center tracking-wide transform hover:scale-105">
             <span class="text-3xl md:text-4xl">🚀</span><span>שכפל את הדאשבורד עכשיו (חינם)</span>
         </a>
-        <div class="text-sm text-slate-400 font-light flex items-center gap-2 opacity-90">
+        <div class="text-sm text-slate-400 font-light flex items-center gap-2 opacity-90 text-center text-center">
             <span>🔥</span><span id="click-counter" class="text-cyber-light font-bold text-lg">...</span><span>משקיעים כבר נהנים מהדאשבורד</span>
         </div>
     </div>
 
-    <div data-aos="fade-up" class="w-full max-w-sm mx-auto mb-24 p-6 rounded-3xl border border-indigo-500/30 bg-[#0e1629]/80 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(99,102,241,0.2)] text-center relative z-20">
+    <div data-aos="fade-up" class="w-full max-w-sm mx-auto mb-24 p-6 rounded-3xl border border-indigo-500/30 bg-[#0e1629]/80 backdrop-blur-md shadow-[0_0_40px_-10px_rgba(99,102,241,0.2)] text-center relative z-20 text-center">
         <div class="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-[#0b1121] p-3 rounded-full border border-indigo-500/40 shadow-lg shadow-indigo-500/20">
             <span class="text-3xl filter drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]">☕</span>
         </div>
-        
         <h3 class="text-xl font-bold text-white mt-4 mb-2">Buy me a Coffee</h3>
-        
         <div class="text-slate-400 text-sm font-light mb-6 inline-block text-right">
             <p>אם הדאשבורד עזר לך, אשמח לפרגון קטן :)</p>
             <p class="mr-28 text-indigo-400 font-medium">+ פידבק כנה ✍️</p>
         </div>
-        
         <div class="flex items-center justify-center gap-4 mb-6">
             <button onclick="changeCoffee(-1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 hover:border-indigo-500/50 hover:text-indigo-400 text-white border border-white/10 transition-all flex items-center justify-center text-xl font-bold select-none cursor-pointer">-</button>
             <div class="flex flex-col items-center w-16">
@@ -459,23 +432,19 @@
             </div>
             <button onclick="changeCoffee(1)" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 hover:border-indigo-500/50 hover:text-indigo-400 text-white border border-white/10 transition-all flex items-center justify-center text-xl font-bold select-none cursor-pointer">+</button>
         </div>
-
         <a id="coffee-link" href="https://paypal.me/EldarSimhon/4" target="_blank" onclick="gtag('event', 'buy_coffee');" 
-           class="w-full bg-white/5 hover:bg-white/10 hover:shadow-[0_0_20px_-5px_rgba(99,102,241,0.3)] text-white border border-white/10 font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-3 group">
+           class="w-full bg-white/5 hover:bg-white/10 hover:shadow-[0_0_20px_-5px_rgba(99,102,241,0.3)] text-white border border-white/10 font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-3 group text-center">
             <span class="text-lg group-hover:text-indigo-100 transition-colors">Support</span>
             <span id="price-display" class="bg-white/10 px-3 py-0.5 rounded-lg text-xl font-extrabold group-hover:bg-indigo-600/30 group-hover:text-indigo-300 transition-all">$4</span>
         </a>
-        
-        <p class="text-[11px] text-slate-400 mt-4 font-medium">
+        <p class="text-[11px] text-slate-400 mt-4 font-medium text-center">
             <span class="text-indigo-500 text-sm align-middle">*</span> התשלום עובר <span class="text-white">ישירות</span> לפייפאל
         </p>
     </div>
 
     <div data-aos="fade-up" class="w-full max-w-5xl mx-auto mb-24 px-4 relative z-10">
         <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 to-green-600/20 rounded-3xl blur-xl opacity-40"></div>
-        
         <div class="relative bg-[#0e1629]/90 backdrop-blur-xl border border-green-500/30 rounded-3xl p-8 md:p-10 flex flex-col md:flex-row items-center gap-8 text-center md:text-right overflow-hidden group hover:border-green-400/50 transition-all duration-500 shadow-2xl">
-            
             <div class="relative flex-shrink-0">
                 <div class="absolute inset-0 bg-green-500/30 rounded-full blur-md animate-pulse"></div>
                 <div class="bg-[#131c2e] p-5 rounded-full border border-green-500/50 relative z-10 group-hover:scale-110 transition-transform duration-500">
@@ -484,68 +453,48 @@
                     </svg>
                 </div>
             </div>
-
             <div class="flex-1 text-right space-y-2">
-                <p class="text-slate-300 text-lg md:text-xl font-light">
-                    אם עולם ההשקעות מדבר אליך ואתה סקרן שאוהב ללמוד...
-                </p>
-                <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">
-                    הצטרף לקהילה השיתופית של אנשי ההייטק
-                </h3>
-                <p class="text-emerald-400 font-medium text-lg md:text-xl tracking-wide">
-                    כדי לזהות יחד את המהפכות הבאות לפני כולם.
-                </p>
+                <p class="text-slate-300 text-lg md:text-xl font-light">אם עולם ההשקעות מדבר אליך ואתה סקרן שאוהב ללמוד...</p>
+                <h3 class="text-2xl md:text-3xl font-bold text-white leading-tight">הצטרף לקהילה השיתופית של אנשי ההייטק</h3>
+                <p class="text-emerald-400 font-medium text-lg md:text-xl tracking-wide">כדי לזהות יחד את המהפכות הבאות לפני כולם.</p>
             </div>
-
             <a href="https://chat.whatsapp.com/EXs3CKTrhnbIjncJTXGy2r" target="_blank" onclick="gtag('event', 'join_whatsapp');"
-               class="flex-shrink-0 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)] flex items-center gap-3 group-hover:scale-105 whitespace-nowrap mt-4 md:mt-0">
+               class="flex-shrink-0 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-[0_0_30px_-5px_rgba(16,185,129,0.4)] flex items-center gap-3 group-hover:scale-105 whitespace-nowrap mt-4 md:mt-0 text-center text-center">
                 <span>הצטרפות לקהילה</span>
                 <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
     </div>
 
-    <div data-aos="fade-up" class="w-full max-w-3xl mx-auto mb-24 px-4 relative z-10">
+    <div data-aos="fade-up" class="w-full max-w-3xl mx-auto mb-24 px-4 relative z-10 text-right">
         <div class="absolute -inset-0.5 bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 rounded-2xl blur opacity-30 animate-pulse"></div>
-        
-        <div class="relative bg-[#0e1629] border border-amber-500/40 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right overflow-hidden">
+        <div class="relative bg-[#0e1629] border border-amber-500/40 rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
             
+            <div class="absolute top-0 right-0 z-20">
+                <div class="bg-amber-500 text-black text-[10px] font-bold px-8 py-1 rotate-45 translate-x-[25px] translate-y-[10px] shadow-md uppercase">NEW</div>
+            </div>
+
             <div class="flex-shrink-0 relative">
-                <div class="absolute -top-12 -right-12 bg-amber-500 text-black text-[10px] font-bold px-8 py-1 rotate-45 shadow-lg">NEW</div>
-                <div class="w-16 h-16 rounded-full bg-amber-900/30 border border-amber-500/50 flex items-center justify-center text-3xl shadow-[0_0_15px_rgba(245,158,11,0.3)]">
-                    👑
-                </div>
+                <div class="w-16 h-16 rounded-full bg-amber-900/30 border border-amber-500/50 flex items-center justify-center text-3xl shadow-[0_0_15px_rgba(245,158,11,0.3)]">👑</div>
             </div>
-
             <div class="flex-1">
-                <h3 class="text-2xl font-bold text-white mb-2">
-                    חדש! <span class="text-amber-400">שירות VIP</span> עד הבית
-                </h3>
-                <p class="text-slate-300 text-sm md:text-base font-light leading-relaxed">
-                    רוצה דאשבורד מוכן בלי להתאמץ? <br>
-                    עבור <span class="font-bold text-amber-300">300₪</span> אני אזין את כל הנתונים עבורך.
-                    <span class="block text-xs text-slate-500 mt-1">אתה שולח דוחות - ומקבל דאשבורד עובד.</span>
-                </p>
+                <h3 class="text-2xl font-bold text-white mb-2">חדש! <span class="text-amber-400">שירות VIP</span> עד הבית</h3>
+                <p class="text-slate-300 text-sm md:text-base font-light leading-relaxed">רוצה דאשבורד מוכן בלי להתאמץ? <br> עבור <span class="font-bold text-amber-300">300₪</span> אני אזין את כל הנתונים עבורך. <span class="block text-xs text-slate-500 mt-1">אתה שולח דוחות - ומקבל דאשבורד עובד.</span></p>
             </div>
-
-            <a href="https://wa.me/972507477732?text=%D7%94%D7%99%D7%99%20%D7%90%D7%9C%D7%93%D7%A8,%20%D7%90%D7%A0%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%94-VIP%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A9%D7%9C%20%D7%94%D7%AA%D7%99%D7%A7%20%D7%94%D7%90%D7%99%D7%A9%D7%99%20%D7%9C%D7%A7%D7%91%D7%9C%D7%AA%20%D7%93%D7%90%D7%A9%D7%91%D7%95%D7%A8%D7%93%20%D7%9E%D7%95%D7%9B%D7%9F" target="_blank" 
-               class="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-[#0e1629] font-bold py-3 px-6 rounded-xl transition-all shadow-[0_0_20px_-5px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.6)] transform hover:-translate-y-1 whitespace-nowrap">
-                הזמן שירות VIP
-            </a>
+            <a href="https://wa.me/972507477732?text=%D7%94%D7%99%D7%99%20%D7%90%D7%9C%D7%93%D7%A8,%20%D7%90%D7%A0%D7%99%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%90%D7%AA%20%D7%A9%D7%99%D7%A8%D7%95%D7%AA%20%D7%94-VIP%20%D7%A2%D7%91%D7%95%D7%A8%20%D7%94%D7%AA%D7%90%D7%9E%D7%94%20%D7%90%D7%99%D7%A9%D7%99%D7%AA%20%D7%A9%D7%9C%20%D7%94%D7%AA%D7%99%D7%A7%20%D7%94%D7%90%D7%99%D7%A9%D7%99%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%93%D7%90%D7%A9%D7%91%D7%95%D7%A8%D7%93%20%D7%9E%D7%95%D7%9B%D7%9F" target="_blank" 
+               class="bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-[#0e1629] font-bold py-3 px-6 rounded-xl transition-all shadow-[0_0_20px_-5px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_-5px_rgba(245,158,11,0.6)] transform hover:-translate-y-1 whitespace-nowrap text-center text-center">הזמן שירות VIP</a>
         </div>
     </div>
 
-    <div data-aos="fade-up" class="w-full max-w-2xl glass-invite rounded-2xl p-8 mb-16 text-center shadow-lg mx-auto mx-4 relative z-10 backdrop-blur-sm">
+    <div data-aos="fade-up" class="w-full max-w-2xl glass-invite rounded-2xl p-8 mb-16 text-center shadow-lg mx-auto mx-4 relative z-10 backdrop-blur-sm text-center">
         <p class="text-slate-300 text-lg md:text-xl mb-6 font-light"> חדש אבל התחום מדבר אליך?</p>
         <div class="animate-pulse-link">
             <a href="https://cloud.mc.ibi.co.il/rc?c=C00110308" target="_blank" onclick="gtag('event', 'open_investment_account');"
-               class="text-cyber-accent font-bold text-2xl md:text-3xl hover:text-cyber-light transition-all underline decoration-cyan-500/30 underline-offset-8">
-                 פתח תיק השקעות אישי עכשיו
-            </a>
+               class="text-cyber-accent font-bold text-2xl md:text-3xl hover:text-cyber-light transition-all underline decoration-cyan-500/30 underline-offset-8">פתח תיק השקעות אישי עכשיו</a>
         </div>
     </div>
 
-    <div class="text-center mb-8 text-xs text-slate-500 font-mono tracking-wider z-10 relative">
+    <div class="text-center mb-8 text-xs text-slate-500 font-mono tracking-wider z-10 relative text-center text-center">
         <span id="visit-counter" class="font-bold text-cyber-accent">...</span><span>מתעניינים ביקרו פה לפניך </span>
         <p class="text-[10px] opacity-60 mt-2">האתר מנוסח בלשון זכר מטעמי נוחות אך מיועד לנשים וגברים כאחד.</p>
     </div>
@@ -561,39 +510,26 @@
                 <svg class="w-5 h-5 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 <span class="text-sm font-medium">LinkedIn</span>
             </a>
-            
-            <a href="CV_Eldar_Simhon.pdf" 
-               download="CV_Eldar_Simhon.pdf" 
-               target="_blank" 
-               onclick="gtag('event', 'download_cv');"
-               class="hover:text-cyber-accent transition-colors text-sm font-medium border-b border-transparent hover:border-cyber-accent pb-1">
-               קורות חיים (PDF)
-            </a>
+            <a href="CV_Eldar_Simhon.pdf" download="CV_Eldar_Simhon.pdf" target="_blank" onclick="gtag('event', 'download_cv');"
+               class="hover:text-cyber-accent transition-colors text-sm font-medium border-b border-transparent hover:border-cyber-accent pb-1">קורות חיים (PDF)</a>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true, offset: 80, easing: 'ease-out-quart' });
-    </script>
-    
+    <script>AOS.init({ duration: 1000, once: true, offset: 80, easing: 'ease-out-quart' });</script>
     <script>
         let cupCount = 1;
         const pricePerCup = 4;
         const paypalBase = "https://paypal.me/EldarSimhon/";
-
         function changeCoffee(amount) {
             cupCount += amount;
             if (cupCount < 1) cupCount = 1; 
-            
             document.getElementById('cup-count').innerText = cupCount;
             const totalPrice = cupCount * pricePerCup;
             document.getElementById('price-display').innerText = '$' + totalPrice;
-            
             document.getElementById('coffee-link').href = paypalBase + totalPrice;
         }
     </script>
-
     <script>
         const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzhUwEbmfu5Axy0A13Iu3a_uVwR3WfBYWpX1j9iGq9z8hcaJ3XZId8am5z4Qg1aRmLHlg/exec";
         function logVisit() {
