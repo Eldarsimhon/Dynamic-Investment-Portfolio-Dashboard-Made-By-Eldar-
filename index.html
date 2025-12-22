@@ -43,6 +43,9 @@
             -webkit-font-smoothing: antialiased; 
             overflow-x: hidden; 
             position: relative;
+            /* Ensure text wraps correctly everywhere */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
         h1 { font-family: 'Outfit', sans-serif; } 
         
@@ -287,100 +290,96 @@
             
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl">📊</div>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">📊</div>
                         <h4 class="font-bold text-lg text-white">ניתוח ביצועים אובייקטיבי</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">תשואה דולרית vs שקלית vs מדד ה-S&P 500, כאשר כולם מנורמלים לתאריך הכניסה המדויק.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת הערכת הביצועים האמיתיים</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת הערכת הביצועים האמיתיים</span>
                     </div>
                 </div>
             </details>
 
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="50">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl">💰</div>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">💰</div>
                         <h4 class="font-bold text-lg text-white">הערכת "כסף בכיף"</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">מעקב שווי נקי הכולל סימולציית מיסוי ושערי מט"ח בלייב (Live Data).</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת הערכת היתרה נטו (After-tax)</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת הערכת היתרה נטו (After-tax)</span>
                     </div>
                 </div>
             </details>
 
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl">🎯</div>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">🎯</div>
                         <h4 class="font-bold text-lg text-white">טבלת מעקב אישית</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">אינדיקטורים (KPIs) כמו P/E, PEG ו-Drawdown בהתאמה מלאה לצרכי המעקב שלי.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת זיהוי הזדמנויות וניהול סיכונים</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת זיהוי הזדמנויות וניהול סיכונים</span>
                     </div>
                 </div>
             </details>
 
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="150">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl"><svg viewBox="0 0 32 32" style="width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; display: inline-block;">
-  <circle r="16" cx="16" cy="16" fill="#4285F4" />
-  <path d="M16 16 L16 0 A16 16 0 0 1 32 16 Z" fill="#FBBC05" />
-  <path d="M16 16 L32 16 A16 16 0 0 1 16 32 Z" fill="#EA4335" />
-</svg></div>
-                        <h4 class="font-bold text-lg text-white">תרשימי אלוקציה</h4>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">🥧</div>
+                        <h4 class="font-bold text-lg text-white">הקצאת נכסים (Allocation)</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">ויזואליזציה מלאה של פיזור התיק ברמת המניה הבודדת וברמת הסקטור כולו.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת מניעת ריכוזיות יתר</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת מניעת ריכוזיות יתר</span>
                     </div>
                 </div>
             </details>
 
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl">📈</div>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">📈</div>
                         <h4 class="font-bold text-lg text-white">גרף תשואה מול Benchmark</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">גרף ויזואלי של תשואת האחזקות מול ה-S&P 500 החל מתאריך הכניסה האישי שלך.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת בחינת עוצמת התיק</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת בחינת עוצמת התיק</span>
                     </div>
                 </div>
             </details>
 
             <details class="group bg-[#1e293b]/50 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-sm open:bg-[#1e293b] open:border-cyber-accent/40 transition-all duration-300" data-aos="fade-up" data-aos-delay="250">
                 <summary class="flex items-center justify-between p-4 cursor-pointer select-none">
-                    <div class="flex items-center gap-4">
-                        <div class="text-xl">👀</div>
+                    <div class="flex items-center gap-4 flex-1">
+                        <div class="text-xl shrink-0">👀</div>
                         <h4 class="font-bold text-lg text-white">רשימת מעקב (Watchlist)</h4>
                     </div>
-                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    <svg class="arrow-icon w-5 h-5 text-cyber-accent transition-transform duration-300 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">גיליון צמוד עם רשימת מעקב מסודרת ויכולת התאמת אינדיקטורים אישית.</p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
-                        <span class="shrink-0">✓</span><span>לטובת סדר מופתי</span>
+                        <span class="shrink-0">✓</span><span class="break-words">לטובת סדר מופתי</span>
                     </div>
                 </div>
             </details>
@@ -402,18 +401,18 @@
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-3 md:mb-4 inline-block">1. הזנת התיק (My Portfolio)</div>
                 <p class="text-slate-300 text-sm md:text-base mb-4 font-light leading-relaxed">גש לטבלה המרכזית והזן את נתוני המניות:</p>
                 <div class="grid grid-cols-2 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 טיקר</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 כמות</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 מחיר קנייה</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 סקטור</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 טיקר</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 כמות</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 מחיר קנייה</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 סקטור</span>
                 </div>
             </div>
             <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all">
                 <div class="text-cyber-accent font-bold text-xl md:text-2xl mb-3 md:mb-4 inline-block">2. ניהול היסטוריה (History)</div>
                 <p class="text-slate-300 text-sm md:text-base mb-4 font-light leading-relaxed">גש לטבלת History בצד הימני והזן:</p>
                 <div class="grid grid-cols-2 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 טיקר + תשואה %</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 סך רווח/הפסד</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 טיקר + תשואה %</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 סך רווח/הפסד</span>
                 </div>
             </div>
             <div class="bg-[#131c2e]/60 p-5 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-cyber-accent/30 transition-all md:col-span-2">
@@ -421,9 +420,9 @@
                 <p class="text-slate-300 text-sm md:text-base mb-5 font-light">הזנת נתונים אחרוניים לדיוק מושלם:</p>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-3 text-slate-400 text-[10px] md:text-sm text-center font-mono">
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 שינוי תאריך</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 הגדרת עלות עמלה</span>
-                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center">🔹 שער קניה דולר ממוצע</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 שינוי תאריך</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 הגדרת עלות עמלה</span>
+                    <span class="bg-[#0e1629] p-2 md:p-3 rounded-lg border border-white/10 flex items-center justify-center h-full w-full whitespace-normal break-words">🔹 שער קניה דולר ממוצע</span>
                 </div>
             </div>
         </div>
@@ -518,14 +517,13 @@
 
     <div class="text-center mb-8 text-xs text-slate-500 font-mono tracking-wider z-10 relative">
         <span id="visit-counter" class="font-bold text-cyber-accent">...</span><span>מתעניינים ביקרו פה לפניך </span>
-                    <p class="text-[10px] opacity-60 mt-2">האתר מנוסח בלשון זכר מטעמי נוחות אך מיועד לנשים וגברים כאחד.</p>
-
     </div>
 
     <footer class="w-full max-w-[90rem] border-t border-white/5 pt-10 pb-12 flex flex-col md:flex-row justify-between items-center text-slate-500 gap-6 px-6 relative z-10 bg-[#0b1121]/80 backdrop-blur-md">
         <div class="text-center md:text-right">
             <p class="font-bold text-slate-200 text-xl mb-1">אלדר שמחון</p>
             <p class="text-sm font-light opacity-80">סטודנט להנדסת תעשיה וניהול</p>
+            <p class="text-[10px] opacity-60 mt-2">האתר מנוסח בלשון זכר מטעמי נוחות אך מיועד לנשים וגברים כאחד.</p>
         </div>
         <div class="flex gap-8 items-center">
             <a href="http://www.linkedin.com/in/eldarsimhon" target="_blank" onclick="gtag('event', 'click_linkedin');"
