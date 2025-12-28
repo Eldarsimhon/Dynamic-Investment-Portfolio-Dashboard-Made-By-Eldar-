@@ -133,6 +133,15 @@
         .animate-pulse-link { animation: pulse-soft 2s infinite ease-in-out; display: inline-block; }
 
         input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        
+        /* Custom Checkbox Style */
+        .checkbox-wrapper input:checked + div {
+            background-color: #06b6d4;
+            border-color: #06b6d4;
+        }
+        .checkbox-wrapper input:checked + div svg {
+            display: block;
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-4 md:p-6 overflow-x-hidden">
@@ -205,7 +214,7 @@
                     <div class="text-cyber-accent text-3xl mb-6 bg-cyan-950/50 w-14 h-14 rounded-2xl flex items-center justify-center border border-cyber-accent/30">🕹️</div>
                     <h4 class="font-bold text-2xl text-white mb-4">סימולטור תחזית</h4>
                     <p class="text-slate-300 text-base leading-relaxed mb-6 font-light">
-                          אתה מגדיר תרחיש תזוזה במדד - והמערכת חוזה מיד ( מודל דטרסמניסטי מבוסס Beta משוקללת) את השינוי הצפוי בתיק שלך באחוזים ובדולרים
+                           אתה מגדיר תרחיש תזוזה במדד - והמערכת חוזה מיד ( מודל דטרסמניסטי מבוסס Beta משוקללת) את השינוי הצפוי בתיק שלך באחוזים ובדולרים
                     </p>
                 </div>
                 <div class="mt-auto pt-4 border-t border-white/5 flex items-center gap-3">
@@ -282,7 +291,7 @@
                 </summary>
                 <div class="p-4 pt-0 text-slate-300 border-t border-white/5 mt-2 text-right">
                     <p class="text-sm leading-relaxed mb-3">
-                        אתה מגדיר תרחיש תזוזה במדד - והמערכת חוזה מיד ( מודל דטרסמניסטי מבוסס Beta משוקללת) את השינוי הצפוי בתיק שלך באחוזים ובדולרים
+                          אתה מגדיר תרחיש תזוזה במדד - והמערכת חוזה מיד ( מודל דטרסמניסטי מבוסס Beta משוקללת) את השינוי הצפוי בתיק שלך באחוזים ובדולרים
                     </p>
                     <div class="flex items-start gap-2 text-sm font-bold text-cyber-accent bg-cyber-dark/50 p-2 rounded-lg">
                         <span class="shrink-0">✓</span><span class="break-words text-right">לדעת כיצד התיק יגיב לפני שהתרחיש קורה</span>
@@ -324,11 +333,11 @@
                     <div class="flex items-center gap-4 flex-1">
                         <div class="shrink-0">
                              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                               <path d="M12 2C17.5228 2 22 6.47715 22 12H12V2Z" fill="#67e8f9"/>
-                               <path d="M22 12C22 17.5228 17.5228 22 12 22V12H22Z" fill="#34d399"/>
-                               <path d="M12 22C6.47715 22 2 17.5228 2 12H12V22Z" fill="#f87171"/>
-                               <path d="M2 12C2 6.47715 6.47715 2 12 2V12H2Z" fill="#fbbf24"/>
-                            </svg>
+                                <path d="M12 2C17.5228 2 22 6.47715 22 12H12V2Z" fill="#67e8f9"/>
+                                <path d="M22 12C22 17.5228 17.5228 22 12 22V12H22Z" fill="#34d399"/>
+                                <path d="M12 22C6.47715 22 2 17.5228 2 12H12V22Z" fill="#f87171"/>
+                                <path d="M2 12C2 6.47715 6.47715 2 12 2V12H2Z" fill="#fbbf24"/>
+                             </svg>
                         </div>
                         <h4 class="font-bold text-lg text-white">תרשימי אלוקציה</h4>
                     </div>
@@ -421,11 +430,27 @@
     </div>
 
     <div data-aos="zoom-in" class="text-center mb-16 flex flex-col items-center gap-6 px-4 relative z-10 text-center text-center">
-        <a href="https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy" target="_blank" 
-           onclick="logClick(); gtag('event', 'duplicate_dashboard');"
-           class="animate-main-button-cyber bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-400 hover:to-teal-400 text-[#0e1629] font-extrabold py-6 md:py-8 px-12 md:px-20 rounded-full text-2xl md:text-3xl transition-all shadow-[0_0_60px_-10px_rgba(6,182,212,0.6)] inline-flex items-center gap-4 w-full md:w-auto justify-center tracking-wide transform hover:scale-105">
+        
+        <div class="w-full max-w-2xl mx-auto mb-2">
+            <div class="bg-[#1e293b]/90 border border-white/10 p-4 md:p-5 rounded-2xl flex items-start gap-4 text-right backdrop-blur-md transition-colors duration-300 hover:border-cyber-accent/40 shadow-lg">
+                <div class="pt-1 checkbox-wrapper relative w-6 h-6 shrink-0">
+                    <input type="checkbox" id="terms-checkbox" class="peer appearance-none w-6 h-6 border-2 border-slate-500 rounded bg-[#0b1121] cursor-pointer transition-colors duration-200 hover:border-cyber-accent focus:outline-none focus:ring-2 focus:ring-cyber-accent/50 focus:ring-offset-0">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none text-[#0b1121] opacity-0 peer-checked:opacity-100 transition-opacity duration-200">
+                        <svg class="w-4 h-4 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                </div>
+                <label for="terms-checkbox" class="text-slate-300 text-sm md:text-base cursor-pointer select-none leading-relaxed">
+                    אני מאשר/ת כי הורדת הדאשבורד היא ל<span class="text-cyber-accent font-bold">שימוש אישי בלבד</span> (Personal Use).
+                    <div class="text-xs text-slate-400 mt-1">ידוע לי כי כל הזכויות שמורות ליוצר וכי חל איסור מוחלט על שימוש מסחרי, העתקה, הפצה או מכירה של הקובץ לצד ג'.</div>
+                </label>
+            </div>
+        </div>
+        <a id="download-btn" href="javascript:void(0)" target="_blank" 
+           onclick="if(!this.classList.contains('pointer-events-none')){ logClick(); gtag('event', 'duplicate_dashboard'); }"
+           class="bg-gradient-to-r from-cyan-500 to-teal-500 text-[#0e1629] font-extrabold py-6 md:py-8 px-12 md:px-20 rounded-full text-2xl md:text-3xl transition-all inline-flex items-center gap-4 w-full md:w-auto justify-center tracking-wide transform opacity-50 grayscale cursor-not-allowed pointer-events-none">
             <span class="text-3xl md:text-4xl">🚀</span><span>שכפל את הדאשבורד עכשיו (חינם)</span>
         </a>
+
         <div class="text-sm text-slate-400 font-light flex items-center gap-2 opacity-90 text-center text-center">
             <span>🔥</span><span id="click-counter" class="text-cyber-light font-bold text-lg">...</span><span>משקיעים כבר נהנים מהדאשבורד</span>
         </div>
@@ -507,7 +532,7 @@
         <div class="animate-pulse-link">
             <a href="https://cloud.mc.ibi.co.il/rc?c=C00110308" target="_blank" onclick="gtag('event', 'open_investment_account');"
                class="text-cyber-accent font-bold text-2xl md:text-3xl hover:text-cyber-light transition-all underline decoration-cyan-500/30 underline-offset-8">
-                            פתח עכשיו תיק השקעות אישי ב-IBI
+                            פעל עכשיו תיק השקעות אישי ב-IBI
             </a>
         </div>
         <p class="text-slate-400 text-sm mt-4 font-light italic opacity-80">
@@ -571,6 +596,28 @@
             if(!isNaN(current)) { el.innerText = parseInt(current) + 1; }
         }
         logVisit();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkbox = document.getElementById('terms-checkbox');
+            const btn = document.getElementById('download-btn');
+            const originalLink = "https://docs.google.com/spreadsheets/d/1wNOGpgsAvNUFNdOt11TbWlkcYubO4uIrjOv053FLPqs/copy";
+            
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    // Unlock button
+                    btn.classList.remove('opacity-50', 'grayscale', 'cursor-not-allowed', 'pointer-events-none');
+                    btn.classList.add('hover:scale-105', 'shadow-[0_0_60px_-10px_rgba(6,182,212,0.6)]', 'hover:from-cyan-400', 'hover:to-teal-400', 'animate-main-button-cyber');
+                    btn.href = originalLink;
+                } else {
+                    // Lock button
+                    btn.classList.add('opacity-50', 'grayscale', 'cursor-not-allowed', 'pointer-events-none');
+                    btn.classList.remove('hover:scale-105', 'shadow-[0_0_60px_-10px_rgba(6,182,212,0.6)]', 'hover:from-cyan-400', 'hover:to-teal-400', 'animate-main-button-cyber');
+                    btn.href = "javascript:void(0)";
+                }
+            });
+        });
     </script>
 </body>
 </html>
